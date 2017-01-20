@@ -1,0 +1,113 @@
+﻿@using Newtonsoft.Json
+@model List<Zaatra.Models.Package>
+@{
+    var packageTags = JsonConvert.SerializeObject(ViewBag.tags);
+    var packages = JsonConvert.SerializeObject(Model);
+}
+
+<section class="header-page fade-up header-page-tours">
+    <div class="bounce-in animate4"><h2 class="header-pagetitle">AMAZING TOUR PACKAGES</h2></div>
+</section>
+
+<div class="divider"><span></span></div>
+
+<!--start page-->
+<section id="internalpage" ng-controller="packagesController" ng-init="myInit(@packageTags, @packages)">
+
+    <!--start container-->
+    <div class="container clearfix">
+
+        <div class="grid_2">
+            <div class="budget_side">
+               
+
+                <!-- end ngRepeat: hotelClass in hotelFilterModel.hotelClasses -->
+
+                @*<input type="button" class="btn-default" value="filter" ng-click="filter()"/>*@
+
+                <a class="btn" ng-click="filter()" style="padding-bottom: 10px; cursor: pointer;">
+                    <p style ="background-color: #1bbc9b; padding: 5px 10px;">Filter</p>
+                </a>
+
+                <div ng-repeat="tc in tags">
+                    <h3>{{tc.Name}}</h3>
+                    <div style=" height: 1px; background: #D0D9DE; margin: 15px 0;"></div>
+                    <!-- ngRepeat: hotelClass in hotelFilterModel.hotelClasses -->
+
+                    <div class="checkbox" ng-repeat="tag in tc.TagViewModels">
+                        <label for="hotel-class{{$index}}" class="side_label1">
+                            <input type="checkbox" id="hotel-class{{$index}}" ng-model="tag.IsSelected" value="{{tag.Name}}">{{tag.Name}}
+                        </label>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="grid_10">
+            <div ng-repeat="p in packages">
+                <div class="grid_5" style="width: 470px; height: 465px;">
+                    <!--start archivetour-->
+                    <div class="archivetour yellow">
+
+                        <!--left-->
+                        <div class="leftarchivetour" style=" height: 275px; overflow: hidden;">
+
+                            <a href="/Package/Details/{{p.Id}}"><img alt="" class="imgleftarchivetour opacity" src="~/{{p.ProfilePicSource.substring(1)}}"></a>
+
+                            <div class="pricetitleleftarchivetour">
+
+                                <div class="priceleftarchivetour">
+                                    <p>{{p.Price}} $</p>
+                                </div>
+                                <p class="titleleftarchivetour">For person</p>
+                            </div>
+
+
+                        </div>
+                        <!--end left-->
+                        <!--right-->
+                        <div class="rightarchivetour">
+
+                            <div class="titledayarchivetour">
+                                <a href="/Package/Details/{{p.Id}}">
+                                    <p class="titlearchivetour">{{p.Name}}</p>
+                                </a>
+
+                                <div class="dayarchivetour">
+                                    <p>{{p.DayCount}}D </p>
+
+                                    <span>{{p.NightCount}}N</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="descriptioniconsarchivetour">
+
+                                <p class="descriptionarchivetour">{{p.Description.substring(0, 140)}}..<a href="/Package/Details/{{p.Id}}">read more</a></p>
+                                
+                            </div>
+
+                        </div>
+                        <!--end right-->
+
+                    </div>
+                    <!--end archivetour-->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--end container-->
+
+</section>
+<!--end internal page-->
+
+<div class="divider"><span></span></div>
+

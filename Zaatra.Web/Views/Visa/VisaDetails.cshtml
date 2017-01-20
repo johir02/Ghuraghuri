@@ -1,0 +1,44 @@
+﻿@model Zaatra.Models.VisaInformation
+@{
+    ViewBag.Title = "VisaDetails";
+}
+<section class="header-page fade-up header-page-gallery">
+    <div class="bounce-in animate4"><h2 class="header-pagetitle">Visa Details<br /><span class="header-pagedescription"></span></h2></div>
+</section>
+<div class="divider"><span></span></div>
+
+<!--start page-->
+<section id="internalpage">
+    <!--start container-->
+    <div class="container clearfix">
+
+
+        <div class="grid_12">
+            <div class="titlesection rotate-In-Down-Left">
+                <h1>@Model.Country.Name</h1>
+                <h4>Processing Fee @Model.VisaFee Tk</h4>
+            </div>
+        </div>
+
+
+        <div class="grid_12 blue fade-left animate1">
+
+            <p>@Html.Raw(Model.Requirement)</p><br />
+
+            <p>**For additional information please contact with us.</p>
+        </div>
+
+        
+        <div class="divider"><span></span></div>
+
+
+        
+
+    </div>
+    <!--end container-->
+
+
+
+</section>
+<!--end internal page-->
+<div class="divider"><span></span></div>

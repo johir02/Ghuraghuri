@@ -1,0 +1,80 @@
+﻿<section class="header-page fade-up header-page-destinations">
+    <div class="bounce-in animate4"><h2 class="header-pagetitle">THE BEST DESTINATIONS</h2></div>
+</section>
+<div class="divider"><span></span></div>
+
+<!--start page-->
+<section id="internalpage" ng-controller="destinationsController">
+    <!--start container-->
+    <div class="container clearfix">
+
+        <div ng-repeat="p in packages">
+            <div class="grid_4">
+                <!--start archive destination-->
+                <div class="archivedestination archivedestination-0 orange">
+
+                    <!--left-->
+                    <div class="leftarchivedestination">
+
+                        <a href="">
+                            <div class="btngalleryarchivedestination rotate"></div>
+                        </a>
+
+                        <img alt="" src="~/Content/img/destinations/photos/img{{$index+1}}.jpg">
+                    </div>
+                    <!--end left-->
+                    <!--right-->
+                    <div class="rightarchivedestination">
+
+                        <div class="titlearchivedestination">
+                            <h4>{{p.DestinationName}}<span class="bulletarchivedestination"></span></h4>
+                        </div>
+
+                        <div class="listarchivedestination">
+
+                            <ul>
+                                <li ng-repeat="pack in p.Packages">
+                                    <a href="#">
+                                        <p><a href="Package/Details/{{pack.Id}}">{{pack.Name}}</a></p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <!--start footer archivedestinations-->
+                        <div class="footerarchivedestination">
+
+                            <div class="galleryarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Gallery" href=""><img alt="" src="~/Content/img/destinations/icongalleryarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                            <div class="promotionarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Promotion" href=""><img alt="" src="~/Content/img/destinations/iconpromotionarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                        </div>
+                        <!--end footer archivedestinations-->
+
+                    </div>
+                    <!--end right-->
+
+                </div>
+                <!--end archive destination-->
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <!--end container-->
+
+</section>
+<!--end internal page-->
+<div class="divider"><span></span></div>

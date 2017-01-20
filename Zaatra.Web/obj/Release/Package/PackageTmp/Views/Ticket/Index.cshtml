@@ -1,0 +1,178 @@
+﻿@using Zaatra.Models.Enum
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    input[type=radio] {
+        display: none;
+    }
+
+        input[type=radio] + label::before {
+            content: '';
+            display: inline-block;
+            border: 1px solid #000;
+            border-radius: 50%;
+            margin: 0 0.5em;
+        }
+        input[type=radio]:checked + label::before {
+            background-color: #1bbc9b;
+        }
+    .radio3 + label::before {
+        width: 1em;
+        height: 1em;
+    }
+
+/*Calendar*/
+    .ui-widget-header {
+        border: 1px solid #18a88b;
+        background: #18a88b;
+        color: #feffff;
+        font-weight: bold;
+    }
+
+    .ui-widget-content {
+        border: 1px solid #18a88b;
+        background: #ffffff;
+        color: #1bbc9b;
+    }
+
+        .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+            border: 1px solid #18a88b;
+            background: #18a88b;
+            color: #000;
+        }
+
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+            border: 1px solid #18a88b;
+            background: #1bbc9b;
+            font-weight: normal;
+            color: #ffffff;
+        }
+</style>
+
+<section class="header-page fade-up header-page-single-project">
+    <div class="bounce-in animate4"><h2 class="header-pagetitle">AIR TICKET REQUIEST</h2></div>
+</section>
+<div class="divider"><span></span></div>
+<!--start page-->
+<section id="internalpage">
+    <!--start container-->
+    <div class="container clearfix">
+
+@using (Html.BeginForm("Index", "Ticket", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <div class="contactform">
+
+        <h2 class="titlewithborder"><span>Air Ticket Booking</span></h2>
+
+        <div class="dividerheight20"></div>
+
+        <div class="grid_12 green fade-right">
+            <ul>
+                <li>
+                    <input name="Type" type="radio" id="round" value="@TicketType.Round" class="radio3" checked="checked"><label for="round" style="padding-right: 50px;">@TicketType.Round</label>
+                    <input name="Type" type="radio" id="oneway" value="@TicketType.OneWay" class="radio3"><label for="oneway">@TicketType.OneWay</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid_6 green fade-right">
+            <ul>
+                <li class="filterinputicon">
+                    <div class="inputicon inputfirstname"></div>
+                </li>
+                <li>
+                    <input placeholder="From" name="StartingPoint" type="text" required="">
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid_6 green fade-right">
+            <ul>
+                <li class="filterinputicon">
+                    <div class="inputicon inputfirstname"></div>
+                </li>
+                <li>
+                    <input placeholder="To" name="Destination" type="text" required="">
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid_4 green fade-right">
+            <ul>
+                <li class="filterinputicon">
+                    <div class="inputicon inputfirstname"></div>
+                </li>
+                <li>
+                    <input placeholder="Departure Date" name="DepartureDate" type="text" id="datepicker" required="">
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid_4 green fade-right">
+            <ul>
+                <li class="filterinputicon">
+                    <div class="inputicon inputfirstname"></div>
+                </li>
+                <li>
+                    <input placeholder="Return Date" name="ReturnDate" type="text" id="datepicker1">
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid_4 green fade-right" style="height: 50px;">
+            <ul>
+                <li style="padding-top: 15px;">
+                    <input name="DateType" type="radio" id="Fixed" value="@DateType.Fixed" class="radio3" checked="checked"><label for="Fixed" style="padding-right: 30px;">@DateType.Fixed</label>
+                    <input name="DateType" type="radio" id="Flexible" value="@DateType.Flexible" class="radio3"><label for="Flexible">@DateType.Flexible</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid_4 green fade-right">
+            <ul>
+                <li>
+                    <label>Adult(s): </label>
+                    <input name="Adults" type="number">
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid_4 green fade-right">
+            <ul>
+                <li>
+                    <label>Children: </label>
+                    <input name="Children" type="number">
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid_4 green fade-right">
+            <ul>
+                <li>
+                    <label>Infants: </label>
+                    <input name="Infants" type="number">
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid_6 green fade-right" style="height: 50px;">
+            <ul>
+                <li style="padding-top: 15px;">
+                    <input name="CabinClass" type="radio" id="Business" value="@CabinClass.Business" class="radio3" checked="checked"><label for="Business" style="padding-right: 30px;">@CabinClass.Business</label>
+                    <input name="CabinClass" type="radio" id="Economy" value="@CabinClass.Economy" class="radio3"><label for="Economy">@CabinClass.Economy</label>
+                    <input name="CabinClass" type="radio" id="AnyCabin" value="@CabinClass.AnyCabin" class="radio3"><label for="AnyCabin">@CabinClass.AnyCabin</label>
+                </li>
+            </ul>
+        </div>
+
+        <input value="SEND" type="submit">
+
+    </div>
+}
+
+    </div>
+</section>

@@ -1,0 +1,156 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetPackage</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="~/Scripts/tinymce/angulartinymce.js"></script>
+    <script src="~/Scripts/Angular/zaatraAdmin.js"></script>
+    <script src="~/Scripts/Angular/AdminCtrl.js"></script>
+
+</head>
+<body ng-app="zaatraAdmin" id="adminStyle">
+    <div class="container" style="margin-top: 50px">
+        <div class="well">
+
+            <div class="row">
+                <div class="col-md-9">
+                    <h2>Add Package</h2>
+                </div>
+                <div class="col-md-3" style="padding-top: 25px; text-align: right;">@Html.ActionLink("Back to List", "Index")</div>
+            </div>
+            <hr />
+
+            <div ng-controller="adminCtrl">
+                @using (Html.BeginForm("CreatePackage", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <label>Vendor</label>
+                    <select class="form-control" id="VendorId" name="VendorId">
+                        <option>---select vendor---</option>
+                        @foreach (var vendor in ViewBag.Vendors)
+                        {
+                            <option value="@vendor.Id">@vendor.Name</option>
+                        }
+                    </select><br />
+
+                    <label>Destination</label>
+                    <select class="form-control" id="DestinationId" name="DestinationId">
+                        <option>---select destination---</option>
+                        @foreach (var destination in ViewBag.Destinations)
+                        {
+                            <option value="@destination.Id">@destination.Name</option>
+                        }
+                    </select><br />
+
+                    <label>Name</label>
+                    <input type="text" name="Name" ng-model="packageInfo.Name" class="form-control" /><br />
+
+                    <label>TourPlaces</label>
+                    <input type="text" name="TourPlaces" ng-model="packageInfo.TourPlaces" class="form-control" /><br />
+
+                    <label>DayCount</label>
+                    <input type="number" name="DayCount" ng-model="packageInfo.DayCount" class="form-control" ng-change="entryDay()" />
+
+
+                    <div ng-show="packageInfo.DayCount>0">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Day No.</label>
+                            </div>
+                            <div class="col-md-5">
+                                <label>Day Description</label>
+                            </div>
+                        </div>
+                        <div ng-repeat="dayDescription in packageInfo.DayDescriptions">
+                            <div class="row" style="background-color: darkgrey">
+                                <div class="col-md-1">
+                                    <input type="number" name="DayDescriptions[{{$index}}].DayNumber" ng-model="dayDescription.DayNumber" class="form-control" value="{{dayDescription.DayNumber}}" readonly="" />
+                                </div>
+                                <div class="col-md-10">
+                                    <textarea ui-tinymce="tinymceOptions" name="DayDescriptions[{{$index}}].Description" ng-model="dayDescription.Description"></textarea>
+                                </div>
+                            </div><br />
+                        </div>
+                    </div>
+                    <br />
+                    <label>NightCount</label>
+                    <input type="number" name="NightCount" ng-model="packageInfo.NightCount" class="form-control" /><br />
+
+                    <label>Description</label>
+                    <textarea type="text" name="Description" ng-model="packageInfo.Description" class="form-control"></textarea><br />
+
+                    <label>TourCode</label>
+                    <input type="text" name="TourCode" ng-model="packageInfo.TourCode" class="form-control" /><br />
+
+                    <label>OfferStart</label>
+                    <input type="date" name="OfferStart" ng-model="packageInfo.OfferStart" class="form-control" /><br />
+
+                    <label>OfferEnd</label>
+                    <input type="date" name="OfferEnd" ng-model="packageInfo.OfferEnd" class="form-control"/><br/>
+                    
+                    <label>Price</label>
+                    <input type="text" name="Price" ng-model="packageInfo.Price" class="form-control" /><br />
+
+                    <label>MonthlyInstallment</label>
+                    <input type="text" name="MonthlyInstallment" ng-model="packageInfo.MonthlyInstallment" class="form-control" /><br />
+
+                    <label>PaymentMethod</label>
+                    <input type="text" name="PaymentMethod" ng-model="packageInfo.PaymentMethod" class="form-control" /><br />
+
+                    <label>MinimumPerson</label>
+                    <input type="text" name="MinimumPerson" ng-model="packageInfo.MinimumPerson" class="form-control" /><br />
+
+                    <label>FeeIncludes</label>
+                    <textarea ui-tinymce="tinymceOptions" name="FeeIncludes" ng-model="packageInfo.FeeIncludes" class="form-control"></textarea><br />
+
+                    <label>FeeExcludes</label>
+                    <textarea ui-tinymce="tinymceOptions" name="FeeExcludes" ng-model="packageInfo.FeeExcludes" class="form-control"></textarea><br />
+
+                    <label>AdditionalInfo</label>
+                    <textarea ui-tinymce="tinymceOptions" name="AdditionalInfo" ng-model="packageInfo.AdditionalInfo" class="form-control"></textarea><br />
+
+                    <label>Transports</label>
+                    <input type="text" name="Transports" ng-model="packageInfo.Transports" class="form-control" /><br />
+
+                    <label>Hotels</label>
+                    <input type="text" name="Hotels" ng-model="packageInfo.Hotels" class="form-control" /><br />
+
+                    <label>Seasons</label>
+                    <input type="text" name="Seasons" ng-model="packageInfo.Seasons" class="form-control" /><br />
+
+                    <label>Upload Profile Picture</label>
+                    <input type="file" name="ProfilePicture"/>
+                    <p>(Height: 520px, Width: 780px) or ( Height:Width = 1:1.5 )</p>
+                    <br />
+
+                    <label>Upload Other Pictures</label>
+                    <input type="file" name="files" multiple=""/>
+                    <p>(Height: 520px, Width: 780px) or ( Height:Width = 1:1.5 )</p>
+                    <br />
+
+                    <input class="btn btn-success" type="submit" />
+                }
+
+                <div>
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+
+                @*<div class="btn btn-info" ng-click="createPackage()">Submit</div>*@
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

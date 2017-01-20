@@ -1,0 +1,381 @@
+﻿<section class="header-page fade-up header-page-destinations">
+    <div class="bounce-in animate4"><h2 class="header-pagetitle">THE BEST DESTINATIONS</h2></div>
+</section>
+<div class="divider"><span></span></div>
+
+<!--start page-->
+<section id="internalpage" ng-controller="destinationsController">
+    <!--start container-->
+    <div class="container clearfix">
+
+    <div ng-repeat="p in packages">
+        <div class="grid_4">
+            <!--start archive destination-->
+            <div class="archivedestination archivedestination-0 orange">
+
+                <!--left-->
+                <div class="leftarchivedestination">
+
+                    <!--<a href="gallery-masonry-with-filter-3-column.html">
+                        <div class="btngalleryarchivedestination rotate"></div>
+                    </a>-->
+
+                    <img alt="" src="~/Content/img/destinations/photos/img{{$index+1}}.jpg" />
+                </div>
+                <!--end left-->
+                <!--right-->
+                <div class="rightarchivedestination">
+
+                    <div class="titlearchivedestination">
+                         <h4>{{p.DestinationName}}<span class="bulletarchivedestination"></span></h4>
+                    </div>
+
+                    <div class="listarchivedestination">
+
+                        <ul>
+                            <li ng-repeat="pack in p.Packages"><a href="/Package/Details/{{pack.Id}}">
+                                <p>{{pack.Name}}</p>
+                            </a></li>
+                        </ul>
+
+                    </div>
+
+                    <!--start footer archivedestinations-->
+                    <div class="footerarchivedestination">
+
+                        <div class="galleryarchivedestination">
+                            <span>
+                                    <a class="tooltip" title="Gallery" href="gallery-masonry-with-filter-3-column.html"><img alt="" src="~/Content/img/destinations/icongalleryarchivedestination.png"></a>
+                                </span>
+                        </div>
+
+                        <div class="promotionarchivedestination">
+                            <span>
+                                    <a class="tooltip" title="Promotion" href="prices.php"><img alt="" src="~/Content/img/destinations/iconpromotionarchivedestination.png"></a>
+                                </span>
+                        </div>
+
+                    </div>
+                    <!--end footer archivedestinations-->
+
+                </div>
+                <!--end right-->
+
+            </div>
+            <!--end archive destination-->
+        </div>
+    </div>
+
+@*
+        <div class="grid_4">
+                <!--start archive destination-->
+                <div class="archivedestination archivedestination-1 blue fade-up animate1">
+
+                    <!--left-->
+                    <div class="leftarchivedestination">
+
+                        <a href="gallery-masonry-with-filter-3-column.html">
+                            <div class="btngalleryarchivedestination rotate"></div>
+                        </a>
+
+                        <img alt="" src="~/Content/img/destinations/photos/img2.jpg">
+
+                    </div>
+                    <!--end left-->
+                    <!--right-->
+                    <div class="rightarchivedestination">
+
+                        <div class="titlearchivedestination">
+                            <h4>ASIA<span class="bulletarchivedestination"></span></h4>
+                        </div>
+
+                        <div class="listarchivedestination">
+
+                            <ul>
+                                <li><a href="#"><p>Cambodia</p></a></li>
+                                <li><a href="#"><p>China</p></a></li>
+                                <li><a href="#"><p>Arab Emirates</p></a></li>
+                                <li><a href="#"><p>Japan</p></a></li>
+                                <li><a href="#"><p>Maldives</p></a></li>
+                                <li><a href="#"><p>Lorem Ipsum</p></a></li>
+                                <li><a href="#"><p>Dolor Sit</p></a></li>
+                            </ul>
+
+                        </div>
+
+                        <!--start footer archivedestinations-->
+                        <div class="footerarchivedestination">
+
+                            <div class="galleryarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Gallery" href="gallery-masonry-with-filter-3-column.html"><img alt="" src="~/Content/img/destinations/icongalleryarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                            <div class="promotionarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Promotion" href="prices.php"><img alt="" src="~/Content/img/destinations/iconpromotionarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                        </div>
+                        <!--end footer archivedestinations-->
+
+                    </div>
+                    <!--end right-->
+
+                </div>
+                <!--end archive destination-->
+            </div>
+
+            <div class="grid_4">
+                <!--start archive destination-->
+                <div class="archivedestination archivedestination-2 violet fade-up animate1">
+
+                    <!--left-->
+                    <div class="leftarchivedestination">
+
+                        <a href="gallery-masonry-with-filter-3-column.html">
+                            <div class="btngalleryarchivedestination rotate"></div>
+                        </a>
+
+                        <img alt="" src="~/Content/img/destinations/photos/img3.jpg">
+
+                    </div>
+                    <!--end left-->
+                    <!--right-->
+                    <div class="rightarchivedestination">
+
+                        <div class="titlearchivedestination">
+                            <h4>EUROPE<span class="bulletarchivedestination"></span></h4>
+                        </div>
+
+                        <div class="listarchivedestination">
+
+                            <ul>
+                                <li><a href="#"><p>Portugal</p></a></li>
+                                <li><a href="#"><p>Italy</p></a></li>
+                                <li><a href="#"><p>Germany</p></a></li>
+                                <li><a href="#"><p>Belgium</p></a></li>
+                                <li><a href="#"><p>France</p></a></li>
+                                <li><a href="#"><p>Lorem Ipsum</p></a></li>
+                                <li><a href="#"><p>Dolor Sit</p></a></li>
+                            </ul>
+
+                        </div>
+
+                        <!--start footer archivedestinations-->
+                        <div class="footerarchivedestination">
+
+                            <div class="galleryarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Gallery" href="gallery-masonry-with-filter-3-column.html"><img alt="" src="~/Content/img/destinations/icongalleryarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                            <div class="promotionarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Promotion" href="prices.php"><img alt="" src="~/Content/img/destinations/iconpromotionarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                        </div>
+                        <!--end footer archivedestinations-->
+
+                    </div>
+                    <!--end right-->
+
+                </div>
+                <!--end archive destination-->
+            </div>
+
+            <div class="grid_4">
+                <!--start archive destination-->
+                <div class="archivedestination archivedestination-0 green fade-up animate1">
+
+                    <!--left-->
+                    <div class="leftarchivedestination">
+
+                        <a href="gallery-masonry-with-filter-3-column.html">
+                            <div class="btngalleryarchivedestination rotate"></div>
+                        </a>
+
+                        <img alt="" src="~/Content/img/destinations/photos/img4.jpg">
+
+                    </div>
+                    <!--end left-->
+                    <!--right-->
+                    <div class="rightarchivedestination">
+
+                        <div class="titlearchivedestination">
+                            <h4>N. AMERICA<span class="bulletarchivedestination"></span></h4>
+                        </div>
+
+                        <div class="listarchivedestination">
+
+                            <ul>
+                                <li><a href="#"><p>California</p></a></li>
+                                <li><a href="#"><p>New York</p></a></li>
+                                <li><a href="#"><p>Florida</p></a></li>
+                                <li><a href="#"><p>Arizona</p></a></li>
+                                <li><a href="#"><p>Nevada</p></a></li>
+                                <li><a href="#"><p>Lorem Ipsum</p></a></li>
+                                <li><a href="#"><p>Dolor Sit</p></a></li>
+                            </ul>
+
+                        </div>
+
+                        <!--start footer archivedestinations-->
+                        <div class="footerarchivedestination">
+
+                            <div class="galleryarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Gallery" href="gallery-masonry-with-filter-3-column.html"><img alt="" src="~/Content/img/destinations/icongalleryarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                            <div class="promotionarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Promotion" href="prices.php"><img alt="" src="~/Content/img/destinations/iconpromotionarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                        </div>
+                        <!--end footer archivedestinations-->
+
+                    </div>
+                    <!--end right-->
+
+                </div>
+                <!--end archive destination-->
+            </div>
+
+            <div class="grid_4">
+                <!--start archive destination-->
+                <div class="archivedestination archivedestination-1 red fade-up animate1">
+
+                    <!--left-->
+                    <div class="leftarchivedestination">
+
+                        <a href="gallery-masonry-with-filter-3-column.html">
+                            <div class="btngalleryarchivedestination rotate"></div>
+                        </a>
+
+                        <img alt="" src="~/Content/img/destinations/photos/img5.jpg">
+
+                    </div>
+                    <!--end left-->
+                    <!--right-->
+                    <div class="rightarchivedestination">
+
+                        <div class="titlearchivedestination">
+                            <h4>OCEANIA<span class="bulletarchivedestination"></span></h4>
+                        </div>
+
+                        <div class="listarchivedestination">
+
+                            <ul>
+                                <li><a href="#"><p>Australia</p></a></li>
+                                <li><a href="#"><p>New Zealand</p></a></li>
+                                <li><a href="#"><p>Cook Islands</p></a></li>
+                                <li><a href="#"><p>Fiji Islands</p></a></li>
+                                <li><a href="#"><p>Solomon Islands</p></a></li>
+                                <li><a href="#"><p>Lorem Ipsum</p></a></li>
+                                <li><a href="#"><p>Dolor Sit</p></a></li>
+                            </ul>
+
+                        </div>
+
+                        <!--start footer archivedestinations-->
+                        <div class="footerarchivedestination">
+
+                            <div class="galleryarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Gallery" href="gallery-masonry-with-filter-3-column.html"><img alt="" src="~/Content/img/destinations/icongalleryarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                            <div class="promotionarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Promotion" href="prices.php"><img alt="" src="~/Content/img/destinations/iconpromotionarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                        </div>
+                        <!--end footer archivedestinations-->
+
+                    </div>
+                    <!--end right-->
+
+                </div>
+                <!--end archive destination-->
+            </div>
+
+            <div class="grid_4">
+                <!--start archive destination-->
+                <div class="archivedestination archivedestination-2 yellow fade-up animate1">
+
+                    <!--left-->
+                    <div class="leftarchivedestination">
+
+                        <a href="gallery-masonry-with-filter-3-column.html">
+                            <div class="btngalleryarchivedestination rotate"></div>
+                        </a>
+
+                        <img alt="" src="~/Content/img/destinations/photos/img6.jpg">
+
+                    </div>
+                    <!--end left-->
+                    <!--right-->
+                    <div class="rightarchivedestination">
+
+                        <div class="titlearchivedestination">
+                            <h4>S. AMERICA<span class="bulletarchivedestination"></span></h4>
+                        </div>
+
+                        <div class="listarchivedestination">
+
+                            <ul>
+                                <li><a href="#"><p>Brazil</p></a></li>
+                                <li><a href="#"><p>Argentine</p></a></li>
+                                <li><a href="#"><p>Peru</p></a></li>
+                                <li><a href="#"><p>Mexico</p></a></li>
+                                <li><a href="#"><p>Venezuela</p></a></li>
+                                <li><a href="#"><p>Lorem Ipsum</p></a></li>
+                                <li><a href="#"><p>Dolor Sit</p></a></li>
+                            </ul>
+
+                        </div>
+
+                        <!--start footer archivedestinations-->
+                        <div class="footerarchivedestination">
+
+                            <div class="galleryarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Gallery" href="gallery-masonry-with-filter-3-column.html"><img alt="" src="~/Content/img/destinations/icongalleryarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                            <div class="promotionarchivedestination">
+                                <span>
+                                    <a class="tooltip" title="Promotion" href="prices.php"><img alt="" src="~/Content/img/destinations/iconpromotionarchivedestination.png"></a>
+                                </span>
+                            </div>
+
+                        </div>
+                        <!--end footer archivedestinations-->
+
+                    </div>
+                    <!--end right-->
+
+                </div>
+                <!--end archive destination-->
+            </div>*@
+
+
+        </div>
+    <!--end container-->
+
+</section>
+<!--end internal page-->
+<div class="divider"><span></span></div>

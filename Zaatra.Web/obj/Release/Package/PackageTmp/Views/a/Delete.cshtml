@@ -1,0 +1,54 @@
+﻿@model Zaatra.Models.VisaInformation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>VisaInformation</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Requirement)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Requirement)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VisaFee)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VisaFee)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OnlineApplicationLink)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OnlineApplicationLink)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Note)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Note)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Country.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country.Name)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

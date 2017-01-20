@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddVendor</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="~/Scripts/tinymce/angulartinymce.js"></script>
+    <script src="~/Scripts/Angular/ZaatraApp.js"></script>
+    <script src="~/Scripts/Angular/VendorCtrl.js"></script>
+
+</head>
+<body ng-app="zaatraApp" id="adminStyle">
+    <div class="container" style="margin-top: 50px">
+        <div class="well">
+
+            <div class="row">
+                <div class="col-md-9">
+                    <h3>Add Vendor</h3>
+                </div>
+                <div class="col-md-3" style="padding-top: 25px; text-align: right;">@Html.ActionLink("Back to List", "Index")</div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-12" ng-controller="vendorCtrl">
+
+                    <label>Name</label>
+                    <input type="text" ng-model="vendorInfo.Name" class="form-control" /><br />
+
+                    <label>Email</label>
+                    <input type="text" ng-model="vendorInfo.Email" class="form-control" /><br />
+
+                    <label>PhoneNumber</label>
+                    <input type="number" ng-model="vendorInfo.PhoneNumber" class="form-control" />
+
+                    <label>Description</label>
+                    <input type="text" ng-model="vendorInfo.Description" class="form-control" /><br />
+
+                    <label>Address</label>
+                    <input type="text" ng-model="vendorInfo.Address" class="form-control" /><br />
+
+                    <div class="btn btn-info" ng-click="addVendor()">Submit</div>
+
+                </div>
+            </div>
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

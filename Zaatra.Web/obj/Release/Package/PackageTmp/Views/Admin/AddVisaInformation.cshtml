@@ -1,0 +1,108 @@
+﻿@model Zaatra.Models.VisaInformation
+
+@{
+    ViewBag.Title = "Create";
+    Layout = null;
+}
+
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Add Visa Info</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="~/Content/Admin.css" rel="stylesheet"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="~/Scripts/tinymce/angulartinymce.js"></script>
+    <script src="~/Scripts/Angular/zaatraAdmin.js"></script>
+    <script src="~/Scripts/Angular/AdminCtrl.js"></script>
+</head>
+
+<div class="container" style="margin-top: 50px;">
+    <div class="well" ng-app="zaatraAdmin" ng-controller="adminCtrl">
+
+        <div class="row">
+            <div class="col-md-9">
+                <h3>Create Visa Details</h3>
+            </div>
+            <div class="col-md-3" style="padding-top: 25px; text-align: right;">@Html.ActionLink("Back to List", "Index")</div>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>Visa Information</legend>
+
+                <div class="row" style="margin-bottom: 5px">
+                    <div class="col-md-2 editor-label">
+                        @Html.LabelFor(model => model.CountryId, "Country")
+                    </div>
+                    <div class="col-md-3 editor-field">
+                        @Html.DropDownList("CountryId", (SelectList) ViewBag.CountryId, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(model => model.CountryId)
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom: 5px">
+                    <div class="col-md-2">
+                        <label>@Html.LabelFor(model => model.Requirement)</label>
+                    </div>
+                    <div class="col-md-10">
+                        <textarea ui-tinymce="tinymceOptions" name="Requirement" ng-model="Requirement"></textarea>
+                        @Html.ValidationMessageFor(model => model.Requirement)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 editor-label">
+                        <label>@Html.LabelFor(model => model.VisaFee)</label>
+                    </div>
+                    <div class="col-md-3 editor-field">
+                        @Html.TextBoxFor(model => model.VisaFee, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(model => model.VisaFee)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 editor-label">
+                        @Html.LabelFor(model => model.OnlineApplicationLink)
+                    </div>
+                    <div class="col-md-3 editor-field">
+                        @Html.TextBoxFor(model => model.OnlineApplicationLink, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(model => model.OnlineApplicationLink)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 editor-label">
+                        @Html.LabelFor(model => model.Note)
+                    </div>
+                    <div class="col-md-3 editor-field">
+                        @Html.TextBoxFor(model => model.Note, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(model => model.Note)
+                    </div>
+                </div>
+                <p>
+                    <input class="btn btn-success" type="submit" value="Create"/>
+                </p>
+            </fieldset>
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+
+
+    </div>
+</div>
+
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

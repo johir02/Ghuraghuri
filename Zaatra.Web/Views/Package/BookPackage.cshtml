@@ -1,0 +1,139 @@
+﻿@model Zaatra.Models.PackageBooking
+<style>
+    .ui-widget-header {
+        border: 1px solid #18a88b;
+        background: #18a88b;
+        color: #feffff;
+        font-weight: bold;
+    }
+    .ui-widget-content {
+        border: 1px solid #18a88b;
+        background: #ffffff;
+        color: #1bbc9b;
+    }
+        .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+            border: 1px solid #18a88b;
+            background: #18a88b;
+            color: #000;
+        }
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+            border: 1px solid #18a88b;
+            background: #1bbc9b;
+            font-weight: normal;
+            color: #ffffff;
+        }
+</style>
+
+<section class="header-page fade-up header-page-single-project">
+    <div class="bounce-in animate4"><h2 class="header-pagetitle">PACKAGE BOOKING REQUIEST</h2></div>
+</section>
+<div class="divider"><span></span></div>
+<!--start page-->
+<section id="internalpage">
+    <!--start container-->
+    <div class="container clearfix">
+        <!--start form-->
+@using (Html.BeginForm("BookPackage", "Package", FormMethod.Post))
+{
+        @Html.ValidationSummary(true)
+
+    <div class="contactform">
+
+        <h2 class="titlewithborder"><span>Package Booking</span></h2>
+
+        <div class="dividerheight20"></div>
+
+        @if(ViewBag.IsSuccess!=null){
+            <div style="color: #1bbc9b;">@ViewBag.IsSuccess</div>
+            <div class="dividerheight20"></div>
+        }
+
+        <div class="grid_6 green fade-right">
+
+            <ul>
+                <li class="filterinputicon">
+                    <div class="inputicon inputfirstname"></div>
+                </li>
+                <li><input placeholder="First Name" name="FirstName" type="text" required="">
+                    @Html.ValidationMessageFor(model => model.FirstName)
+                </li>
+            </ul>
+
+            <div class="dividerheight20"></div>
+
+            <ul>
+                <li class="filterinputicon">
+                    <div class="inputicon inputemail"></div>
+                </li>
+                <li><input placeholder="Email" name="Email" type="text" required="">
+                    @Html.ValidationMessageFor(model => model.Email)
+                </li>
+            </ul>
+
+            <div class="dividerheight20"></div>
+
+            <textarea placeholder="Address" name="Address"></textarea>
+
+            <div class="dividerheight20"></div>
+
+            <ul>
+                <li class="filterinputicon">
+                    <div class="inputicon inputfirstname"></div>
+                </li>
+                <li><input placeholder="Number Of Person" name="NumberOfPerson" type="number" min="1" required="">
+                    @Html.ValidationMessageFor(model => model.NumberOfPerson)
+                </li>
+            </ul>
+            <input value="@ViewBag.PackageId" name="PackageId" type="hidden"/>
+
+        </div>
+
+
+        <div class="grid_6 green fade-right">
+
+            <ul>
+                <li class="filterinputicon">
+                    <div class="inputicon inputfirstname"></div>
+                </li>
+                <li><input placeholder="Last Name" name="LastName" type="text"></li>
+            </ul>
+
+            <div class="dividerheight20"></div>
+
+            <ul>
+                <li class="filterinputicon">
+                    <div class="inputicon inputphone"></div>
+                </li>
+                <li><input placeholder="Phone Number" name="Phone" type="text" required="">
+                    @Html.ValidationMessageFor(model => model.Phone)
+                </li>
+            </ul>
+
+            <div class="dividerheight20"></div>
+
+            <textarea name="SpecialRequirements" placeholder="Special Requirements"></textarea>
+
+            <div class="dividerheight20"></div>
+
+            <ul>
+                <li class="filterinputicon">
+                    <div class="inputicon inputdate"></div>
+                </li>
+                <li><input placeholder="Start Date" name="StartDate" type="text" id="datepicker" required="">
+                    @Html.ValidationMessageFor(model => model.StartDate)
+                </li>
+            </ul>
+
+            <div class="dividerheight20"></div>
+
+            <input value="SEND" type="submit">
+
+
+        </div>
+    </div>
+    <!--end form-->
+}
+    </div>
+
+</section>
+

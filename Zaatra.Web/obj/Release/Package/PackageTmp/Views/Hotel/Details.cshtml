@@ -1,0 +1,225 @@
+﻿@model Zaatra.Models.ViewModels.HotelDetailsViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<section class="header-page fade-up header-page-single-project">
+    <div class="bounce-in animate4"><h2 class="header-pagetitle">PACKAGE DETAILS</h2></div>
+</section>
+<div class="divider"><span></span></div>
+<!--start page-->
+<section id="internalpage">
+<!--start container-->
+<div class="container clearfix">
+
+
+    <!--start flexslider gallery-->
+    <div class="grid_8 green fade-left animate1">
+
+        <!--start title and price-->
+        <div class="titlesingleproject">
+            <h4 style="color: #fff; padding: 20px;">@Model.Hotel.Name</h4>
+        </div>
+        <!--end title and price-->
+        <!--start content flexslider-->
+        <div class="contentflexslider">
+
+            <!--start flexslider-->
+            <div class="flexslider flex-slider" style="height: 440px; overflow: hidden;">
+                <ul class="slides">
+                    @foreach (var packageImage in Model.Hotel.HotelImage)
+                    {
+                        if (packageImage.ImageSource != null)
+                        {
+                            <li><img alt="" src="~/@packageImage.ImageSource.Substring(1)" /></li>
+                        }
+                    }
+                    </ul>
+            </div>
+            <!--end flexslider-->
+            <!--start flexslider carousel-->
+            <div class="flexslider flex-carousel" style=" height: 58px; overflow: hidden;">
+                <ul class="slides">
+                        @foreach (var packageImage in Model.Hotel.HotelImage)
+                        {
+                            if (packageImage.ImageSource!= null)
+                            {
+                                <li><img alt="" src="~/@packageImage.ImageSource.Substring(1)" /></li>
+                            }
+                        }
+                    </ul>
+            </div>
+            <!--end flexslider carousel-->
+
+        </div>
+        <!--end content flexslider-->
+
+
+    </div>
+    <!--end flexslider gallery-->
+    <!--start info project-->
+    <div class="grid_4 green fade-right animate1">
+
+        <!--title date and day-->
+        <div class="datedaysingleproject">
+            <p class="datesingleproject"></p>
+        </div>
+        <!--title date and day-->
+        <!--start content info-->
+        <div class="contentinfo">
+
+            <p>@Model.Hotel.Description</p>
+
+        </div>
+        <!--end content info-->
+
+    </div>
+    <!--end info project-->
+
+</div>
+<!--end container-->
+
+
+<div class="divider"><span></span></div>
+
+<div class="container clearfix">
+    <table class="room-details-table">
+        <thead>
+            <tr>
+                <th>Pic</th>
+                <th>Room type</th>
+                <th>Maximum Occupancy</th>
+                <th>From</th>
+                <th>Nr. Rooms</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var romms in @Model.Rooms)
+        {
+            <tr>
+                <td></td>
+                <td>@romms.RoomType.TypeName</td>
+                <td>
+                    @while (romms.MaximumOccupancy > 0)
+                         {
+                             romms.MaximumOccupancy--;
+                            <img height="32" src="~/Content/img/icon-man.png"/>
+                         } 
+                </td>
+                <td>@if(romms.Discount>0){<span style=" text-decoration: line-through; color: red">@romms.Price tk</span>} <span style="color: green">@(romms.Price * ((100 - romms.Discount) / 100)) tk</span></td>
+                <td>
+                    <a class="btn" href="/Package/BookPackage/@romms.Id">
+                        <p class="custom-button">BOOK NOW</p>
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<div class="divider"><span></span></div>
+
+<div class="container clearfix">
+
+    <div id="services-and-facilities">
+        <div class="services-details-title">
+            <p>Services and Facilities</p>
+        </div>
+        <div>
+            <div>
+                <div class="width-50" ng-show="'@Model.HotelService.Parking'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_services_parking" title="Parking"></span><span>Parking</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelService.Parking</span></div>
+                </div>
+                <div class="width-50" ng-show="'@Model.HotelService.Security'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_room_safe" title="Security"></span><span>Security</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelService.Security</span></div>
+                </div>
+            </div>
+            <div>
+                <div class="width-50" ng-show="'@Model.HotelService.Activities'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_services_bicycle_rental" title="Activities"></span><span>Activities</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelService.Activities</span></div>
+                </div>
+                <div class="width-50" ng-show="'@Model.HotelService.Internet'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_services_wifi" title="Internet"></span><span>Internet</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelService.Internet</span></div>
+                </div>
+            </div>
+            <div>
+                <div class="width-50" ng-show="'@Model.HotelService.General'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_facilities_event" title="General"></span><span>General</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelService.General</span></div>
+                </div>
+                <div class="width-50" ng-show="'@Model.HotelService.Food'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_facilities_pool_bar" title="Food &amp; Drink"></span><span>Food &amp; Drink</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelService.Food</span></div>
+                </div>
+            </div>
+            <div>
+                <div class="width-50" ng-show="'@Model.HotelService.Services'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_facilities_business" title="Services"></span><span>Services</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelService.Services</span></div>
+                </div>
+                <div class="width-50" ng-show="">
+                    <div class="width-25 attributes-group"><span class="icon32 " title=""></span><span></span></div>
+                    <div class="width-75 attribute"><span></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="divider"><span></span></div>
+
+<div class="container clearfix">
+    <div id="policy">
+        <div class="services-details-title">
+            <p>Hotel Policies</p>
+        </div>
+        <div>
+            <div>
+                <div class="width-50" ng-show="'@Model.HotelPolicy.CheckIn'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_services_parking" title="Parking"></span><span>Check-In</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelPolicy.CheckIn</span></div>
+                </div>
+                <div class="width-50" ng-show="'@Model.HotelPolicy.Payment'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_room_safe" title="Security"></span><span>Payment</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelPolicy.Payment</span></div>
+                </div>
+            </div>
+            <div>
+                <div class="width-50" ng-show="'@Model.HotelPolicy.CheckOut'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_services_bicycle_rental" title="Activities"></span><span>Check-Out</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelPolicy.CheckOut</span></div>
+                </div>
+                <div class="width-50" ng-show="'@Model.HotelPolicy.Pets'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_services_wifi" title="Internet"></span><span>Pets</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelPolicy.Pets</span></div>
+                </div>
+            </div>
+            <div>
+                <div class="width-50" ng-show="'@Model.HotelPolicy.Children'!=''">
+                    <div class="width-25 attributes-group"><span class="icon32 icon_facilities_event" title="General"></span><span>Children</span></div>
+                    <div class="width-75 attribute"><span>@Model.HotelPolicy.Children</span></div>
+                </div>
+                <div class="width-50">
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<div class="divider"><span></span></div>
+
+</section>
+
+<!--end internal page-->
+

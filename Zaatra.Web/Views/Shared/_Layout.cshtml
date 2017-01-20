@@ -1,0 +1,648 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Ghuraghuri</title>
+    <!--insert your title here-->
+    <meta name="description" content="Ghuraghuri tour and travel">
+    <!--insert your description here-->
+    <meta name="author" content="nicDark">
+    <!--insert your name here-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta responsive-->
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css"><!--newly added-->
+    <!--START CSS-->
+    <link rel="stylesheet" href="/Content/css/style.css">
+    <!--main-->
+    <link rel="stylesheet" href="/Content/css/grid.css">
+    <!--grid-->
+    <link rel="stylesheet" href="/Content/css/responsive.css">
+    <!--responsive-->
+    <link rel="stylesheet" href="/Content/rs-plugin/css/settings.css" media="screen" />
+    <!--rev slider-->
+    <link rel="stylesheet" href="/Content/showbizpro/css/settings.css" media="screen" />
+    <!--showbiz-->
+    <link rel="stylesheet" href="/Content/css/animate.css">
+    <!--animate-->
+    <link rel="stylesheet" href="/Content/css/superfish.css" media="screen">
+    <!--menu-->
+    <link rel="stylesheet" href="/Content/css/fancybox/jquery.fancybox.css">
+    <!--main fancybox-->
+    <link rel="stylesheet" href="/Content/css/fancybox/jquery.fancybox-thumbs.css">
+    <!--fancybox thumbs-->
+    <link rel="stylesheet" href="/Content/css/isotope.css">
+    <!--isotope-->
+    <link rel="stylesheet" href="/Content/css/flexslider.css">
+    <!--flexslider-->
+    <!--END CSS-->
+    <!--google fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Signika:400,300,600,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="shortcut icon" href="/Content/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="/Content/img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Content/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Content/img/favicon/apple-touch-icon-114x114.png">
+    <!--END FAVICONS-->
+
+
+    <script src="~/Scripts/Angular/destinationsController.js"></script>
+
+    <style>
+        .hotline {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-left: 20px;
+            margin-top: 13px;
+        }
+
+        .custom-circle {
+            width: 121px;
+            height: 121px;
+            border-radius: 130px;
+        }
+
+        .box-circle {
+            border-radius: 50%;
+            width: 118px;
+            height: 118px;
+            border: 10px solid white;
+        }
+
+        .firstcharacter {
+            float: left;
+            color: #F76570;
+            font-size: 50px;
+            line-height: 40px;
+            padding-top: 4px;
+            padding-left: 3px;
+            font-family: cursive;
+        }
+
+        .restcharacter {
+            float: left;
+            color: #F76570;
+            font-size: 30px;
+            line-height: 40px;
+            padding-top: 12px;
+            padding-right: 8px;
+            font-family: cursive;
+        }
+
+        .some-dialogue {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 32px;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="startpage" ng-app="zaatraApp">
+
+
+    <header id="navigationmenu" class="fade-down animate1 navigationmenulight">
+
+
+        <div class="container">
+
+            <!--start navigation-->
+            <div class="grid_12 gridnavigation">
+
+                <strong style="font-size: xx-large; font-family: cursive; color: black;"><p class="firstcharacter">G</p><p class="restcharacter">HURAGHURI</p></strong>
+
+                <ul class="sf-menu" id="nav">
+
+                    <li class="current yellow">
+                        <span class="menufilter"></span>
+                        <a href="/"><strong>HOME</strong></a>
+                    </li>
+
+                    <li class="orange">
+                        <span class="menufilter"></span>
+                        <a href="/Tourpackages"><strong>PACKAGES</strong></a>
+                    </li>
+
+                    <li class="violet">
+                        <span class="menufilter"></span>
+                        <a href="/Destinations"><strong>DESTINATIONS</strong></a>
+                    </li>
+
+                    <li class="green">
+                        <span class="menufilter"></span>
+                        <a href="/Hotels"><strong>HOTELS</strong></a>
+                    </li>
+
+                    <li class="blue">
+                        <span class="menufilter"></span>
+                        <a href="/Ticket"><strong>AIR TICKET</strong></a>
+                    </li>
+                </ul>
+                <!--end navigationmenu-->
+
+            </div>
+            <!--end navigation-->
+
+        </div>
+        <!--end container-->
+
+        <div class="rightsearchclose">
+            <img alt="" src="/Content/img/header/call.png">
+        </div>
+
+    </header>
+    <!--end header-->
+    <!--start right search-->
+    <div class="rightsearchopen">
+
+        <!--search form-->
+        <form role="search" method="get" id="searchform" class="searchform" action="#">
+            <div>
+                <label class="screen-reader-text" for="s">CALL</label>
+
+                <p class="hotline">01777700690</p>
+            </div>
+        </form>
+        <!--end search form-->
+
+        <span class="rightsearchopenclose"></span>
+
+    </div>
+    <!--end right search-->
+    @RenderSection("featured", required: false)
+    <section class="content-wrapper main-content clear-fix">
+        @RenderBody()
+    </section>
+
+
+    <!--start footer-->
+    <footer id="footer">
+
+        <!--start container-->
+        <div class="container clearfix">
+            @{
+                var destinationListInsideOutsideBd = ViewBag.Destinations;
+            }
+            <div class="grid_3 gridfooter">
+                <h3>Discover Motherland</h3>
+                
+                    @foreach (var destination in destinationListInsideOutsideBd.Places_InsideBd)
+                    {
+                        <p><a href="@destination.Id" style="text-decoration: none; color: white;">@destination.Name</a></p>
+                    }
+                
+
+            </div>
+
+            <div class="grid_3 gridfooter">
+                <h3>Explore World</h3>
+                
+                    @foreach (var destination in destinationListInsideOutsideBd.Places_OutsideBd)
+                    {
+                        <p><a href="@destination.Id" style="text-decoration: none; color: white;">@destination.Name</a></p>
+                    }
+                
+            </div>
+
+            <div class="grid_3 gridfooter">
+                <h3>CONTACTS</h3>
+                <p>Address: IIT, University of Dhaka, Bangladesh<br />Phone: +88 01777700690<br />Mail: ghuraghuri@gmail.com</p>
+            </div>
+
+            <div class="grid_3 gridfooter">
+                
+
+            </div>
+
+        </div>
+        <!--end container-->
+
+    </footer>
+    <!--end footer-->
+    <!--start copyright-->
+    <section class="copyright-for-404" id="copyright">
+
+        <!--start container-->
+        <div class="container">
+
+            <div class="grid_12">
+                <p>© Copyright 2013 by Johir - All Rights Reserved</p>
+            </div>
+
+        </div>
+        <!--end container-->
+
+        <div class="backtotop">
+            <a href="#startpage">
+                <img alt="" src="/Content/img/footer/arrowbacktotop.png" />
+            </a>
+        </div>
+
+    </section>
+    <!--end copyright-->
+    <!--Start js-->
+    @*<script src="/Content/js/jquery.min.js"></script>*@
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <!--Jquery-->
+    <script src="/Content/js/jquery-ui.js"></script>
+    <!--Jquery UI-->
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <!-- Google Map API -->
+    <script src="/Content/js/excanvas.js"></script>
+    <!--canvas need for ie-->
+    <script src="/Content/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <!--rev slider-->
+    <script src="/Content/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <!--rev slider-->
+    <script type="text/javascript" src="/Content/showbizpro/js/jquery.themepunch.plugins.min.js"></script>
+    <!--showbiz-->
+    <script type="text/javascript" src="/Content/showbizpro/js/jquery.themepunch.showbizpro.min.js"></script>
+    <!--showbiz-->
+    <script src="/Content/js/scroolto.js"></script>
+    <!--Scrool To-->
+    <script src="/Content/js/jquery.nicescroll.min.js"></script>
+    <!--Nice Scroll-->
+    <script src="/Content/js/jquery.easy-pie-chart.js"></script>
+    <!--Chart-->
+    <script src="/Content/js/fancybox/jquery.fancybox.js"></script>
+    <!--main fancybox-->
+    <script src="/Content/js/fancybox/jquery.fancybox-thumbs.js"></script>
+    <!--fancybox thumbs-->
+    <script src="/Content/js/jquery.inview.min.js"></script>
+    <!--inview-->
+    <script src="/Content/js/menu/hoverIntent.js"></script>
+    <!--superfish-->
+    <script src="/Content/js/menu/superfish.min.js"></script>
+    <!--superfish-->
+    <script src="/Content/js/menu/tinynav.min.js"></script>
+    <!--tinynav-->
+    <script src="/Content/js/jquery.parallax-1.1.3.js"></script>
+    <!--parallax-->
+    <script type='text/javascript' src="~/Content/js/jquery.flexslider-min.js"></script>
+    <!--flexslider-->
+    <script src="/Content/js/isotope/jquery.isotope.min.js"></script>
+    <!--isotope-->
+    <script src="/Content/js/twitter/jquery.twitterfeed.min.js"></script>
+    <!--twitter-->
+    <script src="/Content/js/settings.js"></script>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/infiniteScroll.js"></script>
+    <script src="~/Scripts/Angular/ZaatraApp.js"></script>
+    <script src="~/Scripts/Angular/packagesController.js"></script>
+    <script src="~/Scripts/Angular/destinationsController.js"></script>
+    <script src="~/Scripts/Angular/hotelController.js"></script>
+
+
+    <!--settings-->
+    <!--End js-->
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+
+
+        //start carousel
+        jQuery(document).ready(function () {
+
+            jQuery('.showbiz-container').showbizpro({
+                dragAndScroll: "on",
+                visibleElementsArray: [4, 3, 2, 1]
+            });
+
+        });
+        //end carousel
+
+
+        //start revolution slider
+        var revapi;
+
+        jQuery(document).ready(function () {
+
+            revapi = jQuery('.tp-banner-full-width').revolution(
+             {
+                 delay: 9000,
+                 startwidth: 1170,
+                 startheight: 650,
+                 hideThumbs: 10,
+                 navigationType: "none",
+                 fullWidth: "on",
+                 forceFullWidth: "on"
+             });
+
+        });	//ready
+        //end revolution slider
+
+
+        //start chart
+        $(document).ready(function () {
+
+            $('.percentagehome').easyPieChart({
+                size: 140,
+                rotate: 0,
+                lineWidth: 10,
+                animate: 1000,
+                barColor: '#55738F',
+                trackColor: 'transparent',
+                scaleColor: false,
+                lineCap: 'butt',
+            });
+
+        });
+        //end chart
+
+
+        //start parallax
+        jQuery(document).ready(function () {
+
+            $('.sectionparallax').parallax("100%", 0.04);
+
+        });
+        //end parallax
+
+        //start flexslider
+        jQuery(document).ready(function () {
+
+            $('.flex-carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 100,
+                itemMargin: 5,
+                asNavFor: '.flex-slider'
+            });
+
+            $('.flex-slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: ".flex-carousel",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+
+        });
+        //end flexslider
+
+
+        //isotope filter
+        jQuery(document).ready(function () {
+
+            var $container = $('.isotope-filter');
+
+            $container.isotope({
+                itemSelector: '.single-isotope-filter'
+            });
+
+            //relayout
+            setInterval(function () {
+                $container.isotope('reLayout');
+            }, 0);
+            //reLayout
+
+
+            var $optionSets = $('#options .option-set'),
+			  $optionLinks = $optionSets.find('a');
+
+            $optionLinks.click(function () {
+                var $this = $(this);
+                // don't proceed if already selected
+                if ($this.hasClass('selected')) {
+                    return false;
+                }
+                var $optionSet = $this.parents('.option-set');
+                $optionSet.find('.selected').removeClass('selected');
+                $this.addClass('selected');
+
+                // make option object dynamically, i.e. { filter: '.my-filter-class' }
+                var options = {},
+                    key = $optionSet.attr('data-option-key'),
+                    value = $this.attr('data-option-value');
+                // parse 'false' as false boolean
+                value = value === 'false' ? false : value;
+                options[key] = value;
+                if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
+                    // changes in layout modes need extra logic
+                    changeLayoutMode($this, options)
+                } else {
+                    // otherwise, apply new options
+                    $container.isotope(options);
+                }
+
+                return false;
+            });
+
+        });
+        //end isotope filter
+
+
+        //start masonry
+        jQuery(document).ready(function () {
+
+            $(function () {
+
+                //initialize
+                var $container = $('.stylemasonry');
+
+
+                $container.isotope({
+                    itemSelector: '.singlemasonry'
+                });
+                //end initialize
+
+
+                //start masonry
+                $container.isotope({
+                    itemSelector: '.singlemasonry'
+                });
+                // end masonry
+
+                //relayout
+                setInterval(function () {
+                    $container.isotope('reLayout');
+                }, 0);
+                //reLayout
+
+            });
+
+        });
+        //start masonry
+
+
+        //start tooltip
+        $(document).ready(function () {
+            $(".tooltip").tooltip({ position: { my: "top+0 top-75", at: "center center" } });
+        });
+        //end tooltip
+
+
+        //start fancybox
+        $(document).ready(function () {
+
+            $('.fancybox-thumbs').fancybox({
+                prevEffect: 'none',
+                nextEffect: 'none',
+
+                closeBtn: true,
+                arrows: true,
+                nextClick: true,
+
+                helpers: {
+                    thumbs: {
+                        width: 50,
+                        height: 50
+                    }
+                }
+            });
+
+        });
+        //end fancybox
+
+        //start accordion
+        $(document).ready(function () {
+            $(".accordion").accordion();
+        });
+        //end accordion
+
+        //start map
+        $(document).ready(function () {
+
+            var map;
+            var brooklyn = new google.maps.LatLng(23.7628342, 90.4193271);
+
+            var MY_MAPTYPE_ID = 'custom_style';
+
+            function initialize() {
+
+
+                var mapcanvasdark = $('.map-canvas-dark').length;
+
+
+                if (mapcanvasdark == 1) {
+
+                    var featureOpts = [
+
+                      {
+                          "stylers": [
+                            { "saturation": -100 }
+                          ]
+                      }, {
+                      }
+                    ];
+
+                } else {
+
+                    var featureOpts = [];
+
+                }
+
+                var mapOptions = {
+                    zoom: 14,
+                    draggable: false,
+                    center: brooklyn,
+                    disableDefaultUI: true,
+                    scrollwheel: false,
+                    mapTypeControlOptions: {
+                        mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+                    },
+                    mapTypeId: MY_MAPTYPE_ID
+                };
+
+                map = new google.maps.Map(document.getElementById('map-canvas'),
+                    mapOptions);
+
+                var styledMapOptions = {
+                    name: 'Custom Style'
+                };
+
+                var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+
+                map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+        });
+        //end map
+
+        //start destination height and scroll
+        $(document).ready(function () {
+
+            //height
+            var qntarchivedestination = $('.archivedestination').length;
+            setInterval(function () {
+
+                i = 0;
+
+                while (i < qntarchivedestination) {
+
+                    //title and img hometours height
+                    var leftarchivedestinationheight = $(".archivedestination-" + i + " .leftarchivedestination").height();
+                    var titlearchivedestinationheight = $(".archivedestination-" + i + " .titlearchivedestination").height();
+                    var footerarchivedestinationheight = $(".archivedestination-" + i + " .footerarchivedestination").height();
+
+                    $(".archivedestination-" + i + " .listarchivedestination").css({
+                        "height": leftarchivedestinationheight - titlearchivedestinationheight - footerarchivedestinationheight
+                    });
+
+                    i++;
+
+                }
+
+            }, 0);
+
+            //scroll
+            $(".listarchivedestination").niceScroll({
+                touchbehavior: true,
+                cursorcolor: "#EBEEF2",
+                cursoropacitymax: 0.9,
+                cursorwidth: 3,
+                autohidemode: true,
+                cursorborder: "0px solid #2848BE",
+                cursorborderradius: "0px"
+
+            });
+        });
+        //end destination height and scroll
+
+
+        /* ]]> */
+
+        /*datepicker start*/
+        $(function () {
+            $("#datepicker").datepicker();
+            $("#datepicker1").datepicker();
+        });
+        /*datepicker end*/
+
+
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-36678297-3', 'newgraphicses.it');
+        ga('send', 'pageview');
+
+    </script>
+
+</body>
+</html>

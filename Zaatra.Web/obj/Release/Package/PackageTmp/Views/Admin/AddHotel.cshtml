@@ -1,0 +1,256 @@
+﻿@using Zaatra.Models
+@model Zaatra.Models.ViewModels.HotelDetailsViewModel
+@{
+    Layout = null;
+    /*Model.HotelPolicy = new HotelPolicy();
+    Model.Hotel = new Hotel();
+    Model.HotelService= new HotelServices();
+    Model.Rooms = new List<Room>();*/
+}
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Add Hotel</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="~/Content/Admin.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="~/Scripts/tinymce/angulartinymce.js"></script>
+    <script src="~/Scripts/Angular/zaatraAdmin.js"></script>
+    <script src="~/Scripts/Angular/AdminCtrl.js"></script>
+</head>
+
+<body ng-app="zaatraAdmin">
+    <div class="container" style="margin-top: 50px">
+        <div class="well">
+
+            <div class="row">
+                <div class="col-md-9"><h2>Add Hotel</h2></div>
+                <div class="col-md-3" style="padding-top: 25px; text-align: right;">@Html.ActionLink("Back to List", "Index")</div>
+            </div>
+            <hr />
+            <div ng-controller="adminCtrl">
+                @using (Html.BeginForm("AddHotel", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="row">
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.Hotel.Name)
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.Hotel.Name, new { @class = "form-control", required = "required" })
+                            @Html.ValidationMessageFor(model => model.Hotel.Name)
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.Hotel.Address)
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.Hotel.Address, new { @class = "form-control", required = "required" })
+                            @Html.ValidationMessageFor(model => model.Hotel.Address)
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.Hotel.Description)
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextAreaFor(model => model.Hotel.Description, new { @class = "form-control", style = "height: 250px;" })
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.Hotel.Destination)
+                        </div>
+                        <div class="col-md-3">
+                            @*@Html.DropDownList("DestinationId", String.Empty)*@
+                            @Html.DropDownList("Hotel.DestinationId", (SelectList)ViewBag.DestinationId, new { @class = "form-control", required = "required" })
+                            @Html.ValidationMessageFor(model => model.Hotel.DestinationId)
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 30px;"></div>
+
+                    <legend>Room Details</legend>
+
+                    <div class="row">
+                        <div class="col-md-9"></div>
+                        <div class="col-md-2">
+                            <label>Add New Room:</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="button" class="form-control btn btn-success" ng-click="entryRoom()" value="Add" />
+                        </div>
+                    </div>
+                    <br />
+
+
+                    <div ng-repeat="r in rooms" class="row form-group info-box">
+                        <div class="col-md-1">
+                            <label>Room Type</label>
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DropDownList("Rooms[{{$index}}].RoomTypeId", (SelectList)ViewBag.RoomTypeId, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            <label>Maximum Occupancy</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" name="Rooms[{{$index}}].MaximumOccupancy" class="form-control" ng-model="r.MaximumOccupancy" />
+                        </div>
+                        <div class="col-md-3">
+                            <label>Complementary Breakfast</label>
+                        </div>
+                        <div class="col-md-1" style="height: 45px;">
+                            <input type="checkbox" name="Rooms[{{$index}}].Breakfast" ng-model="r.Breakfast" />
+                        </div>
+                        <div class="col-md-1">
+                            <label>Discount</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" name="Rooms[{{$index}}].Discount" class="form-control" ng-model="r.Discount" />
+                        </div>
+                        <div class="col-md-1">
+                            <label>Price</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" name="Rooms[{{$index}}].Price" class="form-control" ng-model="r.Price" />
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 30px;"></div>
+
+                    <legend>Services and Facilities</legend>
+
+                    <div class="row info-box">
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelService.Parking)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelService.Parking, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelService.Outdoors)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelService.Outdoors, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelService.Activities)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelService.Activities, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelService.Security)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelService.Security, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelService.Internet)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelService.Internet, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelService.Services)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelService.Services, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelService.Food)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelService.Food, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelService.General)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelService.General, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <br />
+
+
+                    <div style="margin-bottom: 30px;"></div>
+                    <legend>Hotel Policies</legend>
+
+                    <div class="row info-box">
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelPolicy.CheckIn)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelPolicy.CheckIn, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelPolicy.CheckOut)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelPolicy.CheckOut, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelPolicy.Payment)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelPolicy.Payment, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelPolicy.Pets)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelPolicy.Pets, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.HotelPolicy.Children)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.HotelPolicy.Children, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Upload Profile Picture</label>
+                            <input type="file" name="ProfilePicture" />
+                            <span>(Dimensions: 1920 x 1080)</span>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Upload Other Pictures</label>
+                            <input type="file" name="files" multiple=""/>
+                            <span>(Dimensions: 1920 x 1080)</span>
+                        </div>
+                    </div>
+                    <br />
+
+                    
+                    <p>
+                        <input class="btn btn-success" type="submit" value="Create" />
+                    </p>
+
+                }
+
+                <div>
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

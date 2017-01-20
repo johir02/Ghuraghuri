@@ -1,0 +1,50 @@
+﻿@model Zaatra.Models.VisaInformation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>VisaInformation</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Requirement)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Requirement)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VisaFee)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VisaFee)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OnlineApplicationLink)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OnlineApplicationLink)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Note)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Note)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Country.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

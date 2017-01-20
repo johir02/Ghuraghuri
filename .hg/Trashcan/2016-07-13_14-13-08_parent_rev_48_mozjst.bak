@@ -1,0 +1,20 @@
+diff --git a/Zaatra.Web/Web.config b/Zaatra.Web/Web.config
+--- a/Zaatra.Web/Web.config
++++ b/Zaatra.Web/Web.config
+@@ -8,4 +8,8 @@
+     <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+     <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+   </configSections>
++  <!--<connectionStrings>
++    ~1~<add name="DefaultConnection" connectionString="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-Zaatra-20160505141329;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-Zaatra-20160505141329.mdf" providerName="System.Data.SqlClient" />@1@
++    <add name="DefaultConnection" connectionString="Data Source=ICEBREAKERS\SQLEXPRESS;Initial Catalog=Zaatra;Integrated Security=true" providerName="System.Data.SqlClient" />
++  </connectionStrings>-->
+   <connectionStrings>
+@@ -11,6 +15,5 @@
+   <connectionStrings>
+-    <!--<add name="DefaultConnection" connectionString="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-Zaatra-20160505141329;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-Zaatra-20160505141329.mdf" providerName="System.Data.SqlClient" />-->
+-    <add name="DefaultConnection" connectionString="Data Source=ICEBREAKERS\SQLEXPRESS;Initial Catalog=Zaatra;Integrated Security=true" providerName="System.Data.SqlClient" />
++    <add name="DefaultConnection" connectionString="Data Source=DESKTOP-J4N60QI\SQLEXPRESS;Initial Catalog=Zaatra;Integrated Security=true" providerName="System.Data.SqlClient" />
+   </connectionStrings>
+   <appSettings>
+     <add key="webpages:Version" value="2.0.0.0" />

@@ -1,0 +1,7 @@
+﻿.info-box {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+input,textarea {
+    margin-bottom: 5px;
+}

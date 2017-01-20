@@ -1,0 +1,17 @@
+mZaatra.Web
+mZaatra.Web/App_Start
+mZaatra.Web/Content/css
+rZaatra.Web/Content/img/gallery/standard/little
+mZaatra.Web/Controllers
+mZaatra.Web/Models
+mZaatra.Web/Repository
+mZaatra.Web/Scripts/angular
+mZaatra.Web/Services
+mZaatra.Web/Views/Account
+mZaatra.Web/Views/Admin
+mZaatra.Web/Views/Destination
+mZaatra.Web/Views/Home
+mZaatra.Web/Views/Hotel
+mZaatra.Web/Views/Package
+mZaatra.Web/Views/Shared
+mZaatra.Web/Views/Visa

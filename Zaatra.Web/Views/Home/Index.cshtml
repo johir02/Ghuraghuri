@@ -1,0 +1,394 @@
+﻿@*@using Zaatra.Models
+    @model List<Zaatra.Models.Package>*@
+@{
+    ViewBag.Title = "Home Page";
+
+}
+
+<style>
+    .color0 {
+        background-color: #F76570;
+    }
+
+    .color1 {
+        background-color: #FFD205;
+    }
+
+    .color2 {
+        background-color: #14b9d5;
+    }
+
+    .color3 {
+        background-color: #1bbc9b;
+    }
+
+    .color4 {
+        background-color: #C377E4;
+    }
+</style>
+
+<!--start slide-->
+<section class="sectionhome fade-down">
+
+    <!--start rev slider-->
+    <div class="tp-banner-container">
+        <div class="tp-banner tp-banner-full-width">
+            <ul>
+
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="1000">
+                    <img src="/Content/img/rev-slider/1/slide1.jpg" style='background-color: #b2c4cc' alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+
+                    <div class="tp-caption lfr"
+                         data-x="550"
+                         data-y="200"
+                         data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="2000"
+                         data-start="200"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         style="z-index: 3">
+                        <img src="/Content/img/rev-slider/1/model.png" alt="">
+                    </div>
+
+                    <div class="tp-caption customin customout"
+                         data-x="534"
+                         data-y="227"
+                         data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="500"
+                         data-start="2400"
+                         data-easing="Back.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         style="z-index: 3">
+                    </div>
+
+                    <div class="tp-caption customin customout"
+                         data-x="453"
+                         data-y="302"
+                         data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="500"
+                         data-start="2600"
+                         data-easing="Back.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         style="z-index: 3">
+                    </div>
+
+                    <div class="tp-caption customin customout"
+                         data-x="372"
+                         data-y="377"
+                         data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="500"
+                         data-start="2800"
+                         data-easing="Back.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         style="z-index: 3">
+                    </div>
+
+                    <div class="tp-caption greybgtextslider skewfromleft customout"
+                         data-x="220"
+                         data-y="220"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="2000"
+                         data-start="700"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="300"
+                         data-endeasing="Power1.easeIn"
+                         data-captionhidden="off"
+                         style="z-index: 6">
+                        WE DO "Ghuraghuri" AND YOU ?
+
+                    </div>
+
+                    <div class="tp-caption greybgtextslider skewfromleft customout"
+                         data-x="106"
+                         data-y="295"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="2000"
+                         data-start="1200"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="300"
+                         data-endeasing="Power1.easeIn"
+                         data-captionhidden="off"
+                         style="z-index: 9">
+                        DO MORE AMAZING STUFFS
+
+                    </div>
+
+                    <div class="tp-caption greybgtextslider skewfromleft customout"
+                         data-x="40"
+                         data-y="370"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="2000"
+                         data-start="1700"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="300"
+                         data-endeasing="Power1.easeIn"
+                         data-captionhidden="off"
+                         style="z-index: 9">
+                        FIND YOUR TEMPTATION
+
+                    </div>
+
+                </li>
+                <!-- SLIDE  -->
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="1000">
+                    <img src="/Content/img/rev-slider/2/slide2.jpg" style='background-color: #b2c4cc' alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+                </li>
+                <!-- SLIDE  -->
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="1000">
+                    <img src="/Content/img/rev-slider/3/slide3.jpg" style='background-color: #b2c4cc' alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+                </li>
+                <!-- SLIDE  -->
+
+            </ul>
+            <div class="tp-bannertimer"></div>
+        </div>
+    </div>
+    <!--end rev slider-->
+
+
+</section>
+<!--end slide-->
+<!--start services-->
+<section id="homeservices" class="sectionhome fade-up">
+
+    <!--start container-->
+    <div class="container clearfix">
+
+        <!--start 1 service-->
+        <div class="grid_4 homeservice">
+
+            @*<div class="imgserviceopen">
+                <img alt="" src="/Content/img/service/service1open.jpg" />
+            </div>*@
+
+            <div class="imgservice">
+                <!--start percentagehome-->
+                <div class="percentagehome" data-percent="90">
+                    <img alt="" src="/Content/img/service/service1.png" />
+                </div>
+                <!--end percentagehome-->
+            </div>
+
+            <h2><a href="#">ADVENTURE</a></h2>
+            <p>Lets go extreme with us</p>
+        </div>
+        <!--end 1 service-->
+        <!--start 2 service-->
+        <div class="grid_4 homeservice">
+
+            @*<div class="imgserviceopen">
+                <img style="width:380px;height:185px;" alt="" src="/Content/img/service/spa.jpg" />
+            </div>*@
+
+            <div class="imgservice">
+
+                <!--start percentagehome-->
+                <div class="percentagehome" data-percent="80">
+                    <div class="box-circle">
+                        <img class="custom-circle" alt="" src="/Content/img/service/spa circle.jpg" />
+                    </div>
+
+                </div>
+                <!--end percentagehome-->
+
+            </div>
+
+            <h2><a href="#">RELAX</a></h2>
+            <p>Your peace | Our service</p>
+        </div>
+        <!--end 2 service-->
+        <!--start 3 service-->
+        <div class="grid_4 homeservice">
+
+            @*<div class="imgserviceopen">
+                <img alt="" src="/Content/img/service/service3open.jpg" />
+            </div>*@
+
+            <div class="imgservice">
+
+                <!--start percentagehome-->
+                <div class="percentagehome" data-percent="70">
+                    <div>
+                        <img alt="" src="/Content/img/service/service3.png" />
+                    </div>
+
+                </div>
+                <!--end percentagehome-->
+
+            </div>
+
+            <h2><a href="#">HONEYMOON</a></h2>
+            <p>Your Honey taste it soon</p>
+        </div>
+        <!--end 3 service-->
+
+    </div>
+    <!--end container-->
+
+</section>
+<!--end services-->
+<!--start section-->
+<section class="sectionhome">
+
+    <!--start container-->
+    <div class="container clearfix">
+
+
+        <div class="grid_12"></div>
+        <div class="grid_12"></div>
+        <!--40px height-->
+
+
+        <div class="grid_12">
+            <div class="titlesection blue">
+                <h2 class="titlewithborder"><span>OUR AGENCY</span></h2>
+            </div>
+        </div>
+
+
+        <div class="grid_6 blue fade-left animate1">
+            <p>We "Ghuraghuri.com" here is specially for you to guide and show places you would love to enjoy. We have three different sections for you to explore. So if you are an adventure lover we will guide you to feel the extreme. We will let you to drink the peace water of heaven. Romance is temptation, we can arrange you the most romatic places in the world. </p>
+            <br />
+
+            <p>We belive in service. We will do anything and everything to provide you the best that we can. So give us the opportunity to make your tour perfect.</p>
+        </div>
+
+        <div class="grid_6 fade-right animate1">
+            @*<div class="progressbar blue fade-right animate1">
+                    <h4 class="progressbartitle" style="width: 80%"><span>VISA PROCESSING - 80%</span></h4>
+                </div>*@
+            <div class="progressbar green fade-right animate2">
+                <h4 class="progressbartitle" style="width: 100%"><span>PACKAGE TOURS - 100%</span></h4>
+            </div>
+            <div class="progressbar orange fade-right animate3">
+                <h4 class="progressbartitle" style="width: 70%"><span>FLY AND DRIVE - 70%</span></h4>
+            </div>
+            <div class="progressbar red fade-right animate4">
+                <h4 class="progressbartitle" style="width: 90%"><span>TRAVEL RELAX - 90%</span></h4>
+            </div>
+        </div>
+
+
+    </div>
+    <!--end container-->
+
+</section>
+<!--end section-->
+
+
+
+<div class="divider"><span></span></div>
+
+
+<!--start homedestinations-->
+<section class="sectionparallax header-page-tours">
+
+    <!--start container for arrows-->
+    <div class="container arrowscarousel clearfix">
+
+        <!--start arrows carousel-->
+        <div class="some-dialogue">
+            TRAVEL | LIFE | FUN
+        </div>
+        <!--end arrows carousel-->
+
+    </div>
+    <!--end container for arrows-->
+    <!--start container-->
+    <div class="container clearfix showbiz-container">
+
+
+
+        <div class="showbiz" data-left="#showbiz_left_2" data-right="#showbiz_right_2" data-play="#showbiz_play_2">
+
+        </div>
+
+
+    </div>
+    <!--end container-->
+
+</section>
+<!--end homedestinations-->
+<!--start page-->
+<section class="sectionhome">
+
+    <!--start container-->
+    <div class="container clearfix">
+
+
+        <div class="grid_12"></div>
+        <div class="grid_12"></div>
+        <!--40px height-->
+
+
+        <div class="grid_12">
+            <div class="titlesection red">
+                <h2 class="titlewithborder"><span>Packages</span></h2>
+            </div>
+        </div>
+
+        <!--start blogmasonry-->
+        <div class="stylemasonry">
+
+            @foreach (var package in Model)
+            {
+                <!--start post masonry-->
+                <div id="dynamicClass" class="grid_4 singlemasonry singlepostmasonry red">
+
+                    <img alt="" class="imgsinglepostmasonry" src="~/@package.ProfilePicSource.Substring(1)">
+
+                    <div class="titledaysinglepostmasonry">
+
+                        <a href="/Package/Details/@package.Id">
+                            <p class="titlesinglepostmasonry">@package.Name</p>
+                        </a>
+                    </div>
+
+                    @if (package.Description == null)
+                    {
+                        <p class="descriptionsinglepostmasonry">No Details Available</p>
+                    }
+                    else if (package.Description.Length > 160)
+                    {
+                        <p class="descriptionsinglepostmasonry">@package.Description.Substring(0, 160)<span>...</span></p>
+                    }
+                    else
+                    {
+                        <p class="descriptionsinglepostmasonry">@package.Description</p>
+                    }
+
+
+                    <a class="areadmoresinglepostmasonry" href="/Package/Details/@package.Id">
+                        <p class="readmoresinglepostmasonry">READMORE..</p>
+                    </a>
+
+                </div>
+                <!--end post masonry-->
+            }
+
+
+
+        </div>
+        <!--end blogmasonry-->
+
+    </div>
+    <!--end container-->
+
+</section>
+<!--end internal page-->
+
+<div class="divider"><span></span></div>
+
+
+

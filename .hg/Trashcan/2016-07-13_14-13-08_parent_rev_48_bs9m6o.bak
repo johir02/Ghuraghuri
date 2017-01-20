@@ -1,0 +1,317 @@
+diff --git a/Zaatra.Web/Views/Package/Index.cshtml b/Zaatra.Web/Views/Package/Index.cshtml
+--- a/Zaatra.Web/Views/Package/Index.cshtml
++++ b/Zaatra.Web/Views/Package/Index.cshtml
+@@ -11,12 +11,34 @@
+     <!--start container-->
+     <div class="container clearfix" >
+ 
+-
+-        <div ng-repeat="p in packages">
+-            <div class="grid_6">
+-                <!--start archivetour-->
+-                <div class="archivetour yellow">
+-
+-                    <!--left-->
+-                    <div class="leftarchivetour">
++        <div class="grid_2">
++            <div class="budget_side">
++                <h3>Ambiance</h3>
++                <div style=" height: 1px; background: #D0D9DE; margin: 15px 0;"></div>
++                <!-- ngRepeat: hotelClass in hotelFilterModel.hotelClasses -->
++                <div class="checkbox">
++                    <label for="hotel-class0" class="side_label1">
++                        <input type="checkbox" id="hotel-class0">Cheap/Budget
++                    </label>
++                </div>
++                <!-- end ngRepeat: hotelClass in hotelFilterModel.hotelClasses -->
++                <div class="checkbox">
++                    <label for="hotel-class1" class="side_label1">
++                        <input type="checkbox" id="hotel-class1">Standard
++                    </label>
++                </div>
++                <!-- end ngRepeat: hotelClass in hotelFilterModel.hotelClasses -->
++                <div class="checkbox">
++                    <label for="hotel-class2" class="side_label1">
++                        <input type="checkbox" id="hotel-class2">Luxury
++                    </label>
++                </div>
++                <!-- end ngRepeat: hotelClass in hotelFilterModel.hotelClasses -->
++                <div class="checkbox">
++                    <label for="hotel-class3" class="side_label1">
++                        <input type="checkbox" id="hotel-class3">Exotic
++                    </label>
++                </div><!-- end ngRepeat: hotelClass in hotelFilterModel.hotelClasses -->
++            </div>
++        </div>
+ 
+@@ -22,5 +44,7 @@
+ 
+-                        <a href="/Package/Details/{{p.Id}}"><img alt="" class="imgleftarchivetour opacity" src="/Content/img/tours/photos/img1.jpg"></a>
+-
+-                        <div class="pricetitleleftarchivetour">
++        <div class="grid_10">
++            <div ng-repeat="p in packages">
++                <div class="grid_5" style="width: 470px; height: 545px;">
++                    <!--start archivetour-->
++                    <div class="archivetour yellow">
+ 
+@@ -26,4 +50,13 @@
+ 
+-                            <div class="priceleftarchivetour">
+-                                <p>{{p.Price}} $</p>
++                        <!--left-->
++                        <div class="leftarchivetour">
++
++                            <a href="/Package/Details/{{p.Id}}"><img alt="" class="imgleftarchivetour opacity" src="/Content/img/tours/photos/img1.jpg"></a>
++
++                            <div class="pricetitleleftarchivetour">
++
++                                <div class="priceleftarchivetour">
++                                    <p>{{p.Price}} $</p>
++                                </div>
++                                <p class="titleleftarchivetour">For person</p>
+                             </div>
+@@ -29,5 +62,3 @@
+                             </div>
+-                            <p class="titleleftarchivetour">For person</p>
+-                        </div>
+ 
+ 
+@@ -32,7 +63,7 @@
+ 
+ 
+-                    </div>
+-                    <!--end left-->
+-                    <!--right-->
+-                    <div class="rightarchivetour">
++                        </div>
++                        <!--end left-->
++                        <!--right-->
++                        <div class="rightarchivetour">
+ 
+@@ -38,6 +69,6 @@
+ 
+-                        <div class="titledayarchivetour">
+-                            <a href="/Package/Details/{{p.Id}}">
+-                                <p class="titlearchivetour">{{p.Name}}</p>
+-                            </a>
++                            <div class="titledayarchivetour">
++                                <a href="/Package/Details/{{p.Id}}">
++                                    <p class="titlearchivetour">{{p.Name}}</p>
++                                </a>
+ 
+@@ -43,9 +74,26 @@
+ 
+-                            <div class="dayarchivetour">
+-                                <p>{{p.DayCount}}D </p>
+-                                
+-                            <span>{{p.NightCount}}N</span>
+-                                
++                                <div class="dayarchivetour">
++                                    <p>{{p.DayCount}}D </p>
++
++                                    <span>{{p.NightCount}}N</span>
++
++                                </div>
++
++                            </div>
++
++                            <div class="descriptioniconsarchivetour">
++
++                                <p class="descriptionarchivetour">{{p.Description.substring(0, 140)}}..<a href="/Package/Details/{{p.Id}}">read more</a></p>
++                                <p class="iconsarchivetour">
++
++                                    <a title="Car" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/car.png"></a>
++                                    <a title="Fly and Drive" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/plane.png"></a>
++                                    <a title="Sun" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/sun.png"></a>
++                                    <a title="Insurance included" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/insurance.png"></a>
++                                    <a title="Nature" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/nature.png"></a>
++
++                                </p>
++
+                             </div>
+ 
+                         </div>
+@@ -49,20 +97,6 @@
+                             </div>
+ 
+                         </div>
+-
+-                        <div class="descriptioniconsarchivetour">
+-
+-                            <p class="descriptionarchivetour">{{p.Description.substring(0, 140)}}..<a href="/Package/Details/{{p.Id}}">read more</a></p>
+-                            <p class="iconsarchivetour">
+-
+-                                <a title="Car" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/car.png"></a>
+-                                <a title="Fly and Drive" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/plane.png"></a>
+-                                <a title="Sun" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/sun.png"></a>
+-                                <a title="Insurance included" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/insurance.png"></a>
+-                                <a title="Nature" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/nature.png"></a>
+-
+-                            </p>
+-
+-                        </div>
++                        <!--end right-->
+ 
+                     </div>
+@@ -67,5 +101,4 @@
+ 
+                     </div>
+-                    <!--end right-->
+-
++                    <!--end archivetour-->
+                 </div>
+@@ -71,6 +104,5 @@
+                 </div>
+-                <!--end archivetour-->
+             </div>
+         </div>
+         
+ 
+@@ -73,126 +105,7 @@
+             </div>
+         </div>
+         
+ 
+-
+-
+-        <div class="grid_6">
+-            <!--start archivetour-->
+-            <div class="archivetour orange fade-right animate1">
+-
+-                <!--left-->
+-                <div class="leftarchivetour">
+-
+-                    <a href="single-project.html"><img alt="" class="imgleftarchivetour opacity" src="/Content/img/tours/photos/img2.jpg"></a>
+-
+-                    <div class="pricetitleleftarchivetour">
+-
+-                        <div class="priceleftarchivetour">
+-                            <p>1000 $</p>
+-                        </div>
+-                        <p class="titleleftarchivetour">Bryce canyon tour</p>
+-                    </div>
+-
+-
+-                </div>
+-                <!--end left-->
+-                <!--right-->
+-                <div class="rightarchivetour">
+-
+-                    <div class="titledayarchivetour">
+-                        <a href="single-project.html">
+-                            <p class="titlearchivetour">WEST COST</p>
+-                        </a>
+-
+-                        <div class="dayarchivetour">
+-                            <p>10</p>
+-                            <span>DAYS</span>
+-
+-                        </div>
+-
+-                    </div>
+-
+-                    <div class="descriptioniconsarchivetour">
+-
+-                        <p class="descriptionarchivetour">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus, elit vitae fermentum hendrerit, neque erat fringilla nibh.</p>
+-                        <p class="iconsarchivetour">
+-
+-                            <a title="Car" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/car.png"></a>
+-                            <a title="Fly and Drive" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/plane.png"></a>
+-                            <a title="Sun" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/sun.png"></a>
+-                            <a title="Insurance included" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/insurance.png"></a>
+-                            <a title="Nature" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/nature.png"></a>
+-
+-                        </p>
+-
+-                    </div>
+-
+-                </div>
+-                <!--end right-->
+-
+-            </div>
+-            <!--end archivetour-->
+-        </div>
+-
+-        <div class="grid_6">
+-            <!--start archivetour-->
+-            <div class="archivetour red fade-left animate1">
+-
+-                <!--left-->
+-                <div class="leftarchivetour">
+-
+-                    <a href="single-project.html"><img alt="" class="imgleftarchivetour opacity" src="/Content/img/tours/photos/img3.jpg"></a>
+-
+-                    <div class="pricetitleleftarchivetour">
+-
+-                        <div class="priceleftarchivetour">
+-                            <p>700 $</p>
+-                        </div>
+-                        <p class="titleleftarchivetour">Amazing tour</p>
+-                    </div>
+-
+-
+-                </div>
+-                <!--end left-->
+-                <!--right-->
+-                <div class="rightarchivetour">
+-
+-                    <div class="titledayarchivetour">
+-                        <a href="single-project.html">
+-                            <p class="titlearchivetour">TURKEY</p>
+-                        </a>
+-
+-                        <div class="dayarchivetour">
+-                            <p>10</p>
+-                            <span>DAYS</span>
+-
+-                        </div>
+-
+-                    </div>
+-
+-                    <div class="descriptioniconsarchivetour">
+-
+-                        <p class="descriptionarchivetour">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus, elit vitae fermentum hendrerit, neque erat fringilla nibh.</p>
+-                        <p class="iconsarchivetour">
+-
+-                            <a title="Car" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/car.png"></a>
+-                            <a title="Fly and Drive" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/plane.png"></a>
+-                            <a title="Sun" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/sun.png"></a>
+-                            <a title="Insurance included" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/insurance.png"></a>
+-                            <a title="Nature" class="tooltip" href="#"><img alt="" src="/Content/img/tours/icon/nature.png"></a>
+-
+-                        </p>
+-
+-                    </div>
+-
+-                </div>
+-                <!--end right-->
+-
+-            </div>
+-            <!--end archivetour-->
+-        </div>
+-
+-
+     </div>
+ 
+     
+diff --git a/Zaatra.Web/Web.config b/Zaatra.Web/Web.config
+--- a/Zaatra.Web/Web.config
++++ b/Zaatra.Web/Web.config
+@@ -8,4 +8,8 @@
+     <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+     <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+   </configSections>
++  <!--<connectionStrings>
++    ~1~<add name="DefaultConnection" connectionString="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-Zaatra-20160505141329;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-Zaatra-20160505141329.mdf" providerName="System.Data.SqlClient" />@1@
++    <add name="DefaultConnection" connectionString="Data Source=ICEBREAKERS\SQLEXPRESS;Initial Catalog=Zaatra;Integrated Security=true" providerName="System.Data.SqlClient" />
++  </connectionStrings>-->
+   <connectionStrings>
+@@ -11,6 +15,5 @@
+   <connectionStrings>
+-    <!--<add name="DefaultConnection" connectionString="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-Zaatra-20160505141329;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-Zaatra-20160505141329.mdf" providerName="System.Data.SqlClient" />-->
+-    <add name="DefaultConnection" connectionString="Data Source=ICEBREAKERS\SQLEXPRESS;Initial Catalog=Zaatra;Integrated Security=true" providerName="System.Data.SqlClient" />
++    <add name="DefaultConnection" connectionString="Data Source=DESKTOP-J4N60QI\SQLEXPRESS;Initial Catalog=Zaatra;Integrated Security=true" providerName="System.Data.SqlClient" />
+   </connectionStrings>
+   <appSettings>
+     <add key="webpages:Version" value="2.0.0.0" />

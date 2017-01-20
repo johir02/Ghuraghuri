@@ -1,0 +1,263 @@
+﻿@model Zaatra.Models.Package
+@{
+    ViewBag.Title = "Details";
+    var packagePolicies = Model.PackagePolicies.GroupBy(_ => _.PolicyCondition.Policy.Name);
+
+}
+
+<section class="header-page fade-up header-page-single-project">
+    <div class="bounce-in animate4"><h2 class="header-pagetitle">PACKAGE DETAILS</h2></div>
+</section>
+<div class="divider"><span></span></div>
+<!--start page-->
+<section id="internalpage">
+    <!--start container-->
+    <div class="container clearfix">
+
+
+        <!--start flexslider gallery-->
+        <div class="grid_8 green fade-left animate1">
+
+            <!--start title and price-->
+            <div class="titlesingleproject">
+                <div class="pricesingleproject">
+                    <p>
+                        <span class="package-details-price">@Model.Price Tk</span>
+                    </p>
+                </div>
+                <h4>@Model.TourPlaces</h4>
+            </div>
+            <!--end title and price-->
+            <!--start content flexslider-->
+            <div class="contentflexslider">
+
+                <!--start flexslider-->
+                <div class="flexslider flex-slider">
+                    <ul class="slides">
+                        @foreach (var packageImage in Model.PackageImages)
+                        {
+                            <li><img alt="" src="~/@packageImage.ImageSource.Substring(1)" /></li>
+
+                        }
+                    </ul>
+                </div>
+                <!--end flexslider-->
+                <!--start flexslider carousel-->
+                <div class="flexslider flex-carousel">
+                    <ul class="slides">
+                        @foreach (var packageImage in Model.PackageImages)
+                        {
+                            <li><img alt="" src="~/@packageImage.ImageSource.Substring(1)" /></li>
+
+                        }
+                    </ul>
+                </div>
+                <!--end flexslider carousel-->
+
+            </div>
+            <!--end content flexslider-->
+
+
+        </div>
+        <!--end flexslider gallery-->
+        <!--start info project-->
+        <div class="grid_4 green fade-right animate1">
+
+            <!--title date and day-->
+            <div class="datedaysingleproject">
+                <p class="datesingleproject">@Model.TourPlaces</p>
+                <div class="daysingleproject">
+                    <p>@Model.DayCount D</p>
+                    <span>@Model.NightCount N</span>
+                </div>
+            </div>
+            <!--title date and day-->
+            <!--start content info-->
+            <div class="contentinfo">
+                @foreach (var packageType in Model.PackageTypes)
+                {
+                    <p><strong>@packageType.Type.Name</strong></p>
+                }
+
+                <p>@Model.Description</p>
+                <blockquote>
+                    Destination: @Model.TourPlaces<br/>
+                    Tour Duration: @Model.OfferStart.ToString("dd MMM, yyyy") - @Model.OfferEnd.ToString("dd MMM, yyyy") : @Model.DayCount days, @Model.NightCount nights<br/>
+                    Price: @Model.Price Tk per person<br/>
+
+                </blockquote>
+                @*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus, elit vitae fermentum hendrerit, neque erat fringilla nibh, vel sodales sem diam nec nunc. Donec mattis blandit metus ut volutpat.</p><br />*@
+                <a class="btn" href="/Package/BookPackage/@Model.Id">
+                    <p>BOOK NOW</p>
+                </a>
+            </div>
+            <!--end content info-->
+
+        </div>
+        <!--end info project-->
+
+        <div class="divider"><span></span></div>
+
+
+        <div class="grid_12 violet fade-left animate1">
+            <div class="container clearfix">
+                <div class="package-details-title">
+                    <strong>
+                        Fees
+                    </strong>
+                </div>
+                <div class="grid_6 violet">
+                    <strong>Fee Includes:</strong>
+                    <p>
+                        @Html.Raw(Model.FeeIncludes)
+                    </p>
+                </div>
+                <div class="grid_6 violet">
+                    <strong>Fee Excludes:</strong>
+                    <p>
+                        @Html.Raw(Model.FeeExcludes)
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="divider"><span></span></div>
+
+
+        <div class="grid_12 violet fade-left animate1">
+            <div class="container clearfix">
+                <div class="package-details-title">
+                    <strong>
+                        Itinerary details
+                    </strong>
+                </div>
+
+                <div class="grid_8 blue fade-right animate1">
+
+                    @{
+                        var daycount = 0;
+                    }
+                    <!--start accordion-->
+                    <div class="accordion accordionlight">
+                        @foreach (var dayDetail in Model.DayDescriptions)
+                        {
+                            daycount++;
+                            <h4 class="blue-borderleft firstaccordiontitle">Day @daycount</h4>
+                            <div style="height: auto !important; color: red" >
+                                <p>
+                                    @Html.Raw(dayDetail.Description)
+                                </p>
+                            </div>
+
+                        }
+                    </div>
+                    <!--end accordion-->
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="divider"><span></span></div>
+
+        <div class="grid_12 violet fade-left animate1">
+            <div class="container clearfix">
+                <div class="package-details-title">
+                    <strong>
+                        Terms and Conditions
+                    </strong>
+                </div>
+
+                <div class="grid_8 blue fade-right animate1">
+                    @foreach (var packagePolicy in packagePolicies)
+                    {
+                        <div>
+                            <strong>@packagePolicy.Key</strong>
+
+                            <p>
+                                <ul>
+                                    @foreach (var p in packagePolicy)
+                                    {
+                                        <li>@p.PolicyCondition.Condition</li>
+                                    }
+                                </ul>
+
+                            </p>
+                        </div>
+                        <br />
+                        <br />
+
+                    }
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="divider"><span></span></div>
+
+        <div class="grid_12 violet fade-left animate1">
+            <div class="container clearfix">
+                <div class="package-details-title">
+                    <strong>
+                        Additional Information
+                    </strong>
+                </div>
+
+                <div class="grid_8 blue fade-right animate1">
+                    <div>
+                        <strong>Additional Info:</strong>
+                        <p>
+                            @Html.Raw(Model.AdditionalInfo)
+                        </p>
+                    </div>
+                    <br />
+                    <br />
+
+                    <div>
+                        <strong>Transports:</strong>
+                        <p>
+                            @Model.Transports
+                        </p>
+                    </div>
+                    <br />
+                    <br />
+
+                    <div>
+                        <strong>Hotels:</strong>
+                        <p>
+                            @Model.Hotels
+                        </p>
+                    </div>
+                    <br />
+                    <br />
+
+                    <div>
+                        <strong>Seasons:</strong>
+                        <p>
+                            @Model.Seasons
+                        </p>
+                    </div>
+                    <br />
+                    <br />
+
+                    <div>
+                        <strong>Visa Information:</strong>
+                        <p>
+                            ...
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    <!--end container-->
+
+
+</section>
+<!--end internal page-->
+<div class="divider"><span></span></div>

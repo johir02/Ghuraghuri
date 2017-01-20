@@ -1,0 +1,86 @@
+﻿@model Zaatra.Models.ViewModels.AdminIndexModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="~/Content/Admin.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="~/Scripts/Angular/zaatraAdmin.js"></script>
+    <script src="~/Scripts/Angular/AdminCtrl.js"></script>
+</head>
+
+
+<div class="container" style="margin-top: 50px;">
+    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        
+        <div style="text-align: right">
+            <button style="background-color: #1bbc9b; padding: 5px; color: #fff; border-radius: 4px" type="submit">
+                Log Out
+            </button>
+        </div>
+    }
+    <div class="well row">
+        <div class="col-lg-12" style="text-align: center;">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="btn btn-default" href="admin/AddPackage">Add Package</a>
+                </div>
+                <div class="col-md-3">
+                    <a class="btn btn-default" href="admin/AddHotel">Add Hotel</a>
+                </div>
+                <div class="col-md-3">
+                    <a class="btn btn-default" href="admin/AddVisaInformation">Add Visa Info</a>
+                </div>
+                <div class="col-md-3">
+                    <a class="btn btn-default" href="admin/AddVendor">Add Vendor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+            <th>Package Name</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Person</th>
+            <th>Start Date</th>
+            <th>Special Requirements</th>
+            <th>Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var requiest in Model.PackageBookings)
+        {
+            <tr>
+                <td>@requiest.Package.Name</td>
+                <td>@requiest.FirstName @requiest.LastName</td>
+                <td>@requiest.Email</td>
+                <td>@requiest.Phone</td>
+                <td>@requiest.Address</td>
+                <td>@requiest.NumberOfPerson</td>
+                <td>@requiest.StartDate</td>
+                <td>@requiest.SpecialRequirements</td>
+                <td>@requiest.TimeStamp</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

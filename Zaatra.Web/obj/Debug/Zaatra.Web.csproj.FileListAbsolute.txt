@@ -1,0 +1,264 @@
+F:\Zaatra\Zaatra.Web\bin\Zaatra.dll.config
+F:\Zaatra\Zaatra.Web\bin\Zaatra.dll
+F:\Zaatra\Zaatra.Web\bin\Zaatra.pdb
+F:\Zaatra\Zaatra.Web\bin\Antlr3.Runtime.dll
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.AspNet.dll
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.Core.dll
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.dll
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.dll
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Zaatra\Zaatra.Web\bin\EntityFramework.dll
+F:\Zaatra\Zaatra.Web\bin\Microsoft.Data.Edm.dll
+F:\Zaatra\Zaatra.Web\bin\Microsoft.Data.OData.dll
+F:\Zaatra\Zaatra.Web\bin\Microsoft.Web.Infrastructure.dll
+F:\Zaatra\Zaatra.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Zaatra\Zaatra.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Zaatra\Zaatra.Web\bin\Newtonsoft.Json.dll
+F:\Zaatra\Zaatra.Web\bin\System.Net.Http.Formatting.dll
+F:\Zaatra\Zaatra.Web\bin\System.Spatial.dll
+F:\Zaatra\Zaatra.Web\bin\System.Web.Helpers.dll
+F:\Zaatra\Zaatra.Web\bin\System.Web.Http.dll
+F:\Zaatra\Zaatra.Web\bin\System.Web.Http.OData.dll
+F:\Zaatra\Zaatra.Web\bin\System.Web.Http.WebHost.dll
+F:\Zaatra\Zaatra.Web\bin\System.Web.Mvc.dll
+F:\Zaatra\Zaatra.Web\bin\System.Web.Optimization.dll
+F:\Zaatra\Zaatra.Web\bin\System.Web.Razor.dll
+F:\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Deployment.dll
+F:\Zaatra\Zaatra.Web\bin\System.Web.WebPages.dll
+F:\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Razor.dll
+F:\Zaatra\Zaatra.Web\bin\WebGrease.dll
+F:\Zaatra\Zaatra.Web\bin\WebMatrix.WebData.dll
+F:\Zaatra\Zaatra.Web\bin\Org.Mentalis.Security.Cryptography.dll
+F:\Zaatra\Zaatra.Web\bin\Mono.Math.dll
+F:\Zaatra\Zaatra.Web\bin\Newtonsoft.Json.xml
+F:\Zaatra\Zaatra.Web\bin\System.Net.Http.Formatting.xml
+F:\Zaatra\Zaatra.Web\bin\System.Web.Http.xml
+F:\Zaatra\Zaatra.Web\bin\System.Web.Http.WebHost.xml
+F:\Zaatra\Zaatra.Web\bin\EntityFramework.xml
+F:\Zaatra\Zaatra.Web\bin\System.Web.Helpers.xml
+F:\Zaatra\Zaatra.Web\bin\System.Web.Mvc.xml
+F:\Zaatra\Zaatra.Web\bin\System.Web.Razor.xml
+F:\Zaatra\Zaatra.Web\bin\System.Web.WebPages.xml
+F:\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Deployment.xml
+F:\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Razor.xml
+F:\Zaatra\Zaatra.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Zaatra\Zaatra.Web\bin\WebMatrix.WebData.xml
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.AspNet.xml
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.Core.xml
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.xml
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.xml
+F:\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Zaatra\Zaatra.Web\bin\System.Web.Http.OData.xml
+F:\Zaatra\Zaatra.Web\bin\Microsoft.Data.Edm.xml
+F:\Zaatra\Zaatra.Web\bin\Microsoft.Data.OData.xml
+F:\Zaatra\Zaatra.Web\bin\System.Spatial.xml
+F:\Zaatra\Zaatra.Web\bin\Org.Mentalis.Security.Cryptography.xml
+F:\Zaatra\Zaatra.Web\bin\Mono.Math.xml
+F:\Zaatra\Zaatra.Web\bin\de\Microsoft.Data.Edm.resources.dll
+F:\Zaatra\Zaatra.Web\bin\es\Microsoft.Data.Edm.resources.dll
+F:\Zaatra\Zaatra.Web\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\Zaatra\Zaatra.Web\bin\it\Microsoft.Data.Edm.resources.dll
+F:\Zaatra\Zaatra.Web\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\Zaatra\Zaatra.Web\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\Zaatra\Zaatra.Web\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\Zaatra\Zaatra.Web\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\Zaatra\Zaatra.Web\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\Zaatra\Zaatra.Web\bin\de\Microsoft.Data.OData.resources.dll
+F:\Zaatra\Zaatra.Web\bin\es\Microsoft.Data.OData.resources.dll
+F:\Zaatra\Zaatra.Web\bin\fr\Microsoft.Data.OData.resources.dll
+F:\Zaatra\Zaatra.Web\bin\it\Microsoft.Data.OData.resources.dll
+F:\Zaatra\Zaatra.Web\bin\ja\Microsoft.Data.OData.resources.dll
+F:\Zaatra\Zaatra.Web\bin\ko\Microsoft.Data.OData.resources.dll
+F:\Zaatra\Zaatra.Web\bin\ru\Microsoft.Data.OData.resources.dll
+F:\Zaatra\Zaatra.Web\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\Zaatra\Zaatra.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\Zaatra\Zaatra.Web\bin\de\System.Spatial.resources.dll
+F:\Zaatra\Zaatra.Web\bin\es\System.Spatial.resources.dll
+F:\Zaatra\Zaatra.Web\bin\fr\System.Spatial.resources.dll
+F:\Zaatra\Zaatra.Web\bin\it\System.Spatial.resources.dll
+F:\Zaatra\Zaatra.Web\bin\ja\System.Spatial.resources.dll
+F:\Zaatra\Zaatra.Web\bin\ko\System.Spatial.resources.dll
+F:\Zaatra\Zaatra.Web\bin\ru\System.Spatial.resources.dll
+F:\Zaatra\Zaatra.Web\bin\zh-Hans\System.Spatial.resources.dll
+F:\Zaatra\Zaatra.Web\bin\zh-Hant\System.Spatial.resources.dll
+F:\Zaatra\Zaatra.Web\obj\Debug\Zaatra.dll
+F:\Zaatra\Zaatra.Web\obj\Debug\Zaatra.pdb
+F:\Zaatra\Zaatra.Web\obj\Debug\Zaatra.Web.csprojResolveAssemblyReference.cache
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Zaatra.dll.config
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Zaatra.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Zaatra.pdb
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Antlr3.Runtime.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.AspNet.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.Core.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\EntityFramework.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Data.Edm.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Data.OData.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Web.Infrastructure.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Newtonsoft.Json.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Net.Http.Formatting.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Spatial.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Helpers.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.OData.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.WebHost.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Mvc.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Optimization.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Razor.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Deployment.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Razor.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\WebGrease.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\WebMatrix.WebData.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Org.Mentalis.Security.Cryptography.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Mono.Math.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Newtonsoft.Json.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Net.Http.Formatting.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.WebHost.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\EntityFramework.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Helpers.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Mvc.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Razor.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Deployment.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Razor.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\WebMatrix.WebData.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.AspNet.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.Core.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.OData.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Data.Edm.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Data.OData.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Spatial.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Org.Mentalis.Security.Cryptography.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Mono.Math.xml
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\de\Microsoft.Data.Edm.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\es\Microsoft.Data.Edm.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\it\Microsoft.Data.Edm.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\de\Microsoft.Data.OData.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\es\Microsoft.Data.OData.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\fr\Microsoft.Data.OData.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\it\Microsoft.Data.OData.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ja\Microsoft.Data.OData.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ko\Microsoft.Data.OData.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ru\Microsoft.Data.OData.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\de\System.Spatial.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\es\System.Spatial.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\fr\System.Spatial.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\it\System.Spatial.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ja\System.Spatial.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ko\System.Spatial.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ru\System.Spatial.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hans\System.Spatial.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hant\System.Spatial.resources.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\obj\Debug\Zaatra.Web.csprojResolveAssemblyReference.cache
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\obj\Debug\Zaatra.dll
+F:\johir\Ghuraghuri\Zaatra\Zaatra.Web\obj\Debug\Zaatra.pdb
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Zaatra.dll.config
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Zaatra.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Zaatra.pdb
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Antlr3.Runtime.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.AspNet.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.Core.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\EntityFramework.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Data.Edm.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Data.OData.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Web.Infrastructure.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Newtonsoft.Json.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Net.Http.Formatting.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Spatial.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Helpers.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.OData.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.WebHost.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Mvc.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Optimization.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Razor.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Deployment.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Razor.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\WebGrease.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\WebMatrix.WebData.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Org.Mentalis.Security.Cryptography.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Mono.Math.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Newtonsoft.Json.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Net.Http.Formatting.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.WebHost.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\EntityFramework.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Helpers.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Mvc.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Razor.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Deployment.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.WebPages.Razor.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\WebMatrix.WebData.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.AspNet.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.Core.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OAuth.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Web.Http.OData.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Data.Edm.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Microsoft.Data.OData.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\System.Spatial.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Org.Mentalis.Security.Cryptography.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\Mono.Math.xml
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\de\Microsoft.Data.Edm.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\es\Microsoft.Data.Edm.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\it\Microsoft.Data.Edm.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\de\Microsoft.Data.OData.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\es\Microsoft.Data.OData.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\fr\Microsoft.Data.OData.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\it\Microsoft.Data.OData.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ja\Microsoft.Data.OData.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ko\Microsoft.Data.OData.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ru\Microsoft.Data.OData.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\de\System.Spatial.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\es\System.Spatial.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\fr\System.Spatial.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\it\System.Spatial.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ja\System.Spatial.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ko\System.Spatial.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\ru\System.Spatial.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hans\System.Spatial.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\bin\zh-Hant\System.Spatial.resources.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\obj\Debug\Zaatra.Web.csprojResolveAssemblyReference.cache
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\obj\Debug\Zaatra.dll
+F:\ghuraghuri johir\Ghuraghuri\Zaatra\Zaatra.Web\obj\Debug\Zaatra.pdb

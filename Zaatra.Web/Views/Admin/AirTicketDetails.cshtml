@@ -1,0 +1,135 @@
+﻿@model Zaatra.Models.ViewModels.AirTicketViewModel
+@{
+    ViewBag.Title = "AirTicketDetails";
+    Layout = null;
+}
+
+<style>
+    .jumbotron .col-md-4, .jumbotron .col-md-6 {
+        
+    }
+</style>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="~/Content/Admin.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<div class="container" style="margin-top: 50px;">
+    <h2>Air Ticket Details</h2>
+
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-4 text-right"><b>Type:</b>
+            </div>
+            <div class="col-md-8">@Model.AirTicket.Type</div>
+
+            <div class="col-md-4 text-right"><b>From:</b>
+            </div>
+            <div class="col-md-8">@Model.AirTicket.StartingPoint</div>
+
+            <div class="col-md-4 text-right"><b>To:</b>
+            </div>
+            <div class="col-md-8">@Model.AirTicket.Destination</div>
+
+            <div class="col-md-4 text-right"><b>Departure Date:</b>
+            </div>
+            <div class="col-md-8">@Model.AirTicket.DepartureDate</div>
+
+            <div class="col-md-4 text-right"><b>Return Date:</b>
+            </div>
+            <div class="col-md-8">@Model.AirTicket.ReturnDate</div>
+
+            <div class="col-md-4 text-right"><b>Date Type:</b>
+            </div>
+            <div class="col-md-8">@Model.AirTicket.DateType</div>
+
+            <div class="col-md-4 text-right"><b>Adult:</b>
+            </div>
+            <div class="col-md-8">@Model.AirTicket.Adults</div>
+
+            <div class="col-md-4 text-right"><b>Children:</b>
+            </div>
+            <div class="col-md-8">@Model.AirTicket.Children</div>
+
+            <div class="col-md-4 text-right"><b>Infant:</b>
+            </div>
+            <div class="col-md-8">@Model.AirTicket.Infants</div>
+
+            <div class="col-md-4 text-right"><b>Cabin Class:</b>
+            </div>
+            <div class="col-md-8">@Model.AirTicket.CabinClass</div>
+        </div>
+        <legend></legend>
+        <div class="row">
+            <div class="col-md-4 text-right">
+                <b>Name:</b>
+            </div>
+            <div class="col-md-8">@Model.TicketPersonalInfo.Name</div>
+
+            <div class="col-md-4 text-right">
+                <b>Date of Birth:</b>
+            </div>
+            <div class="col-md-8">@Model.TicketPersonalInfo.DateOfBirth.ToString("dd/MM/yyyy")</div>
+
+            <div class="col-md-4 text-right">
+                <b>Phone:</b>
+            </div>
+            <div class="col-md-8">@Model.TicketPersonalInfo.ContactNumber</div>
+
+            <div class="col-md-4 text-right">
+                <b>Email:</b>
+            </div>
+            <div class="col-md-8">@Model.TicketPersonalInfo.Email</div>
+
+            <div class="col-md-4 text-right">
+                <b>Airline Preference:</b>
+            </div>
+            @if (Model.TicketPersonalInfo.AirLinePreference == null)
+            {
+                <div class="col-md-8">N/A</div>
+            }
+            else
+            {
+                <div class="col-md-8">@Model.TicketPersonalInfo.AirLinePreference</div>
+            }
+
+            <div class="col-md-4 text-right">
+                <b>Budget:</b>
+            </div>
+            @if (Model.TicketPersonalInfo.Budget == null)
+            {
+                <div class="col-md-8">N/A</div>
+            }
+            else
+            {
+                <div class="col-md-8">@Model.TicketPersonalInfo.Budget</div>
+            }
+
+            <div class="col-md-4 text-right">
+                <b>MemberShip Code:</b>
+            </div>
+            @if (Model.TicketPersonalInfo.MembershipCode == null)
+            {
+                <div class="col-md-8">N/A</div>
+            }
+            else
+            {
+                <div class="col-md-8">@Model.TicketPersonalInfo.MembershipCode</div>
+            }
+        </div>
+    </div>
+    <div class="btn btn-default">
+        <a href="/Admin/Index">Back</a>
+    </div>
+</div>
+
+
+

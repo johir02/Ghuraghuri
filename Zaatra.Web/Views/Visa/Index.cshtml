@@ -1,0 +1,42 @@
+﻿
+<section class="header-page fade-up header-page-gallery">
+    <div class="bounce-in animate4"><h2 class="header-pagetitle">WE PROCESS VISA<br /><span class="header-pagedescription">of</span></h2></div>
+</section>
+<div class="divider"><span></span></div>
+
+<!--start page-->
+<section id="internalpage">
+    <!--start container-->
+    <div class="container clearfix">
+        @{
+            var i = 0;
+        }
+        
+        @foreach (var country in Model)
+        {
+            i++;
+            
+            <div class="grid_4 fade-up animate1">
+                <!--start image gallery-->
+                <div class="singleimagegallery violet">
+
+                    <a href="/Visa/VisaDetails/@country.Id">
+                        <img alt="" class="imgsingleimagegallery" src="@Url.Content("~/Content/img/gallery/standard/little/img"+i+".jpg")">
+
+                        <div class="titlesingleimagegallery">
+                             <p>@country.Name<span class="bulletgallery"></span></p>
+                        </div>
+                    </a>
+                </div>
+                <!--end image gallery-->
+            </div>
+
+        }
+
+
+    </div>
+    <!--end container-->
+
+</section>
+<!--end internal page-->
+<div class="divider"><span></span></div>

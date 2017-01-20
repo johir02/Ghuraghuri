@@ -1,0 +1,97 @@
+﻿<section class="header-page fade-up header-page-destinations">
+    <div class="bounce-in animate4">
+        <h2 class="header-pagetitle">THE BEST HOTELS</h2>
+    </div>
+</section>
+<div class="divider"><span></span></div>
+
+<!--start page-->
+<section ng-controller="hotelController">
+
+    <!--start container-->
+    <div class="container clearfix">
+
+        <div class="grid_3">
+            <div class="budget_side">
+
+
+                <!-- end ngRepeat: hotelClass in hotelFilterModel.hotelClasses -->
+
+                @*<input type="button" class="styled-button-3" value="Filter" ng-click="filter()" />*@
+
+                <a class="btn" ng-click="filter()" style="padding-bottom: 10px;">
+                    <p style="background-color: #1bbc9b; padding: 5px 10px;">Filter</p>
+                </a>
+
+                @*<div ng-repeat="tc in tags">
+                    <h3>{{tc.Name}}</h3>
+                    <div style=" height: 1px; background: #D0D9DE; margin: 15px 0;"></div>
+                    <!-- ngRepeat: hotelClass in hotelFilterModel.hotelClasses -->
+
+                    <div class="checkbox" ng-repeat="tag in tc.TagViewModels">
+                        <label for="hotel-class{{$index}}" class="side_label1">
+                            <input type="checkbox" id="hotel-class{{$index}}" ng-model="tag.IsSelected" value="{{tag.Name}}">{{tag.Name}}
+                        </label>
+                    </div>
+
+                </div>*@
+
+
+            </div>
+        </div>
+
+        <div class="grid_9">
+            <div ng-repeat="h in hotels" class="hotel">
+                <div class="ash-background go-right">
+
+                    <div class="width-25">
+                        <img alt="" class="imgleftarchivetour opacity" src="~/{{h.ProPic.substring(1)}}">
+                    </div>
+                    <div class="width-75">
+                        <div class="padding-20" style="height: 125px;">
+                            <div class="hotel-name">
+                                <a href="/Hotel/Details/{{h.Id}}">
+                                    <p>{{h.Name}}</p>
+                                </a>
+                            </div>
+                            <div class="hotel-address">
+                                <div class="width-75">{{h.Address}}</div>
+                                <div class="width-25">
+                                    <span class="deep-ash-background go-right padding-5 destination">{{h.Destination}}</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="width-50 room-type">
+                                    <span>{{h.RoomType}} Room for {{h.Occupancy}} Person(s)</span>
+                                </div>
+                                <div class="hotel-card__cell text-right hotel-card__price__wrapper">
+                                    <span class="hotel-card__from">From</span>
+                                    <span class="hotel-card__price">{{h.Price}} BDT</span>
+                                </div>    
+                            </div>
+                            
+                            <div class="baseline"></div>
+                            <div style="float: right">
+                                <div class="badge discount">
+                                    <div class="description"><span>Up To</span></div>
+                                    <div class="value"><span>-{{h.Discount}}%</span></div>
+                                </div>
+                                <div class="book-now">
+                                    <a>BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--end container-->
+
+</section>
+<!--end internal page-->
+<div class="divider"><span></span></div>
